@@ -1,0 +1,6 @@
+framework module Egret {
+  umbrella header "Egret-umbrella.h"
+
+  export *
+  module * { export * }
+}

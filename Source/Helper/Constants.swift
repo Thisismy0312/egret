@@ -1,0 +1,300 @@
+//
+//  Constants.swift
+//  SwiftBaseProject
+//
+//  Created by Mauricio Cousillas on 3/12/18.
+//  Copyright © 2018 Mauricio Cousillas. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+let GB = 1073741824.0 // swiftlint:disable:this all
+let screenSize = UIScreen.main.bounds
+let screenWidth = screenSize.width
+let screenHeight = screenSize.height
+var showAle = true
+
+struct Constants {
+    static let defaultUrl = URL(string: "foolvpn.com")! // swiftlint:disable:this all
+    static let uuid = UIDevice.current.identifierForVendor!.uuidString
+}
+
+struct DNSBases {
+    static let roots = ["foolvpn.com"]
+    static let http_dns_roots:[String] = [] // swiftlint:disable:this all
+}
+
+struct UserDefaultsKeys {
+    static let sessionId = "sessionId"
+    static let mode = "mode"
+    static let activeArea = "VPNDataAccess.activeArea"
+    static let receipt = "iapReceipt"
+}
+
+let areaTableItemIdentifier = "AreaTableItem"
+
+var showAlert = true
+
+enum goodType { // swiftlint:disable:this all
+    static let basic = 4
+    static let premium = 5
+    static let traffic = 6
+    static let basic_to_premium = 40 // swiftlint:disable:this all
+}
+
+let countryCodes = [
+    ["Indonesia", "62"],
+    ["Andorra", "376"],
+    ["United Arab Emirates (UAE)", "971"],
+    ["Afghanistan", "93"],
+    ["Antigua and Barbuda", "1"],
+    ["Anguilla", "1"],
+    ["Albania", "355"],
+    ["Armenia", "374"],
+    ["Angola", "244"],
+    ["Antarctica", "672"],
+    ["Argentina", "54"],
+    ["American Samoa", "1"],
+    ["Austria", "43"],
+    ["Australia", "61"],
+    ["Aruba", "297"],
+    ["Åland Islands", "358"],
+    ["Azerbaijan", "994"],
+    ["Bosnia And Herzegovina", "387"],
+    ["Barbados", "1"],
+    ["Bangladesh", "880"],
+    ["Belgium", "32"],
+    ["Burkina Faso", "226"],
+    ["Bulgaria", "359"],
+    ["Bahrain", "973"],
+    ["Burundi", "257"],
+    ["Benin", "229"],
+    ["Saint Barthélemy", "590"],
+    ["Bermuda", "1"],
+    ["Brunei Darussalam", "673"],
+    ["Bolivia, Plurinational State Of", "591"],
+    ["Brazil", "55"],
+    ["Bahamas", "1"],
+    ["Bhutan", "975"],
+    ["Botswana", "267"],
+    ["Belarus", "375"],
+    ["Belize", "501"],
+    ["Canada", "1"],
+    ["Cocos (keeling) Islands", "61"],
+    ["Congo, The Democratic Republic Of The", "243"],
+    ["Central African Republic", "236"],
+    ["Congo", "242"],
+    ["Switzerland", "41"],
+    ["Côte D'ivoire", "225"],
+    ["Cook Islands", "682"],
+    ["China", "86"],
+    ["Chile", "56"],
+    ["Cameroon", "237"],
+    ["Colombia", "57"],
+    ["Costa Rica", "506"],
+    ["Cuba", "53"],
+    ["Cape Verde", "238"],
+    ["Curaçao", "599"],
+    ["Christmas Island", "61"],
+    ["Cyprus", "357"],
+    ["Czech Republic", "420"],
+    ["Germany", "49"],
+    ["Djibouti", "253"],
+    ["Denmark", "45"],
+    ["Dominica", "1"],
+    ["Dominican Republic", "1"],
+    ["Algeria", "213"],
+    ["Ecuador", "593"],
+    ["Estonia", "372"],
+    ["Egypt", "20"],
+    ["Eritrea", "291"],
+    ["Spain", "34"],
+    ["Ethiopia", "251"],
+    ["Finland", "358"],
+    ["Fiji", "679"],
+    ["Falkland Islands (malvinas)", "500"],
+    ["Micronesia, Federated States Of", "691"],
+    ["Faroe Islands", "298"],
+    ["France", "33"],
+    ["Gabon", "241"],
+    ["United Kingdom", "44"],
+    ["Grenada", "1"],
+    ["Georgia", "995"],
+    ["French Guyana", "594"],
+    ["Guernsey", "44"],
+    ["Ghana", "233"],
+    ["Gibraltar", "350"],
+    ["Greenland", "299"],
+    ["Gambia", "220"],
+    ["Guinea", "224"],
+    ["Guadeloupe", "590"],
+    ["Equatorial Guinea", "240"],
+    ["Greece", "30"],
+    ["Guatemala", "502"],
+    ["Guam", "1"],
+    ["Guinea-bissau", "245"],
+    ["Guyana", "592"],
+    ["Hong Kong", "852"],
+    ["Honduras", "504"],
+    ["Croatia", "385"],
+    ["Haiti", "509"],
+    ["Hungary", "36"],
+    ["Ireland", "353"],
+    ["Israel", "972"],
+    ["Isle Of Man", "44"],
+    ["Iceland", "354"],
+    ["India", "91"],
+    ["British Indian Ocean Territory", "246"],
+    ["Iraq", "964"],
+    ["Iran, Islamic Republic Of", "98"],
+    ["Italy", "39"],
+    ["Jersey", "44"],
+    ["Jamaica", "1"],
+    ["Jordan", "962"],
+    ["Japan", "81"],
+    ["Kenya", "254"],
+    ["Kyrgyzstan", "996"],
+    ["Cambodia", "855"],
+    ["Kiribati", "686"],
+    ["Comoros", "269"],
+    ["Saint Kitts and Nevis", "1"],
+    ["North Korea", "850"],
+    ["South Korea", "82"],
+    ["Kuwait", "965"],
+    ["Cayman Islands", "1"],
+    ["Kazakhstan", "7"],
+    ["Lao People's Democratic Republic", "856"],
+    ["Lebanon", "961"],
+    ["Saint Lucia", "1"],
+    ["Liechtenstein", "423"],
+    ["Sri Lanka", "94"],
+    ["Liberia", "231"],
+    ["Lesotho", "266"],
+    ["Lithuania", "370"],
+    ["Luxembourg", "352"],
+    ["Latvia", "371"],
+    ["Libya", "218"],
+    ["Morocco", "212"],
+    ["Monaco", "377"],
+    ["Moldova, Republic Of", "373"],
+    ["Montenegro", "382"],
+    ["Saint Martin", "590"],
+    ["Madagascar", "261"],
+    ["Marshall Islands", "692"],
+    ["Macedonia (FYROM)", "389"],
+    ["Mali", "223"],
+    ["Myanmar", "95"],
+    ["Mongolia", "976"],
+    ["Macau", "853"],
+    ["Northern Mariana Islands", "1"],
+    ["Martinique", "596"],
+    ["Mauritania", "222"],
+    ["Montserrat", "1"],
+    ["Malta", "356"],
+    ["Mauritius", "230"],
+    ["Maldives", "960"],
+    ["Malawi", "265"],
+    ["Mexico", "52"],
+    ["Malaysia", "60"],
+    ["Mozambique", "258"],
+    ["Namibia", "264"],
+    ["New Caledonia", "687"],
+    ["Niger", "227"],
+    ["Norfolk Islands", "672"],
+    ["Nigeria", "234"],
+    ["Nicaragua", "505"],
+    ["Netherlands", "31"],
+    ["Norway", "47"],
+    ["Nepal", "977"],
+    ["Nauru", "674"],
+    ["Niue", "683"],
+    ["New Zealand", "64"],
+    ["Oman", "968"],
+    ["Panama", "507"],
+    ["Peru", "51"],
+    ["French Polynesia", "689"],
+    ["Papua New Guinea", "675"],
+    ["Philippines", "63"],
+    ["Pakistan", "92"],
+    ["Poland", "48"],
+    ["Saint Pierre And Miquelon", "508"],
+    ["Pitcairn Islands", "870"],
+    ["Puerto Rico", "1"],
+    ["Palestine", "970"],
+    ["Portugal", "351"],
+    ["Palau", "680"],
+    ["Paraguay", "595"],
+    ["Qatar", "974"],
+    ["Réunion", "262"],
+    ["Romania", "40"],
+    ["Serbia", "381"],
+    ["Russian Federation", "7"],
+    ["Rwanda", "250"],
+    ["Saudi Arabia", "966"],
+    ["Solomon Islands", "677"],
+    ["Seychelles", "248"],
+    ["Sudan", "249"],
+    ["Sweden", "46"],
+    ["Singapore", "65"],
+    ["Saint Helena, Ascension And Tristan Da Cunha", "290"],
+    ["Slovenia", "386"],
+    ["Slovakia", "421"],
+    ["Sierra Leone", "232"],
+    ["San Marino", "378"],
+    ["Senegal", "221"],
+    ["Somalia", "252"],
+    ["Suriname", "597"],
+    ["South Sudan", "211"],
+    ["Sao Tome And Principe", "239"],
+    ["El Salvador", "503"],
+    ["Sint Maarten", "1"],
+    ["Syrian Arab Republic", "963"],
+    ["Swaziland", "268"],
+    ["Turks and Caicos Islands", "1"],
+    ["Chad", "235"],
+    ["Togo", "228"],
+    ["Thailand", "66"],
+    ["Tajikistan", "992"],
+    ["Tokelau", "690"],
+    ["Timor-leste", "670"],
+    ["Turkmenistan", "993"],
+    ["Tunisia", "216"],
+    ["Tonga", "676"],
+    ["Turkey", "90"],
+    ["Trinidad Tobago", "1"],
+    ["Tuvalu", "688"],
+    ["Taiwan", "886"],
+    ["Tanzania, United Republic Of", "255"],
+    ["Ukraine", "380"],
+    ["Uganda", "256"],
+    ["United States (USA)", "1"],
+    ["Uruguay", "598"],
+    ["Uzbekistan", "998"],
+    ["Holy See (vatican City State)", "379"],
+    ["Saint Vincent The Grenadines", "1"],
+    ["Venezuela, Bolivarian Republic Of", "58"],
+    ["British Virgin Islands", "1"],
+    ["US Virgin Islands", "1"],
+    ["Vietnam", "84"],
+    ["Vanuatu", "678"],
+    ["Wallis And Futuna", "681"],
+    ["Samoa", "685"],
+    ["Kosovo", "383"],
+    ["Yemen", "967"],
+    ["Mayotte", "262"],
+    ["South Africa", "27"],
+    ["Zambia", "260"],
+    ["Zimbabwe", "263"]]
+
+// 正式广告id
+#if DEBUG
+// 测试广告id
+let GADInterstitialUnitId = "ca-app-pub-3940256099942544/4411468910"
+let GADRewardBasedVideoAdId = "ca-app-pub-3940256099942544/1712485313"
+let GADNativeAdId = "ca-app-pub-3940256099942544/3986624511"
+#else
+let GADInterstitialUnitId = "ca-app-pub-2489079192172828/1872385721"
+let GADRewardBasedVideoAdId = "ca-app-pub-2489079192172828/2096873086"
+let GADNativeAdId = "ca-app-pub-2489079192172828/5937577643"
+#endif

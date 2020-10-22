@@ -1,0 +1,16 @@
+PODS:
+  - Egret (0.1.0)
+
+DEPENDENCIES:
+  - Egret (from `../`)
+
+EXTERNAL SOURCES:
+  Egret:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Egret: affd8dddd30b071921919ebbb1d06be2367d234f
+
+PODFILE CHECKSUM: 06b14f1c904f58861fb8c50c40e2df3ed6473c2d
+
+COCOAPODS: 1.9.1
