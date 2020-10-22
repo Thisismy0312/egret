@@ -1,5 +1,5 @@
 PODS:
-  - Egret (1.0.0)
+  - Egret (1.0.1)
 
 DEPENDENCIES:
   - Egret (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Egret: 3ccae12b3156acabf50da63b1dbe914f6f1956db
+  Egret: bc0e9cca1d8e9dfb33d551c2864aff447202be2d
 
 PODFILE CHECKSUM: 06b14f1c904f58861fb8c50c40e2df3ed6473c2d
 
