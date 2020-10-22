@@ -16,31 +16,7 @@ let screenHeight = screenSize.height
 var showAle = true
 
 struct Constants {
-    static let defaultUrl = URL(string: "foolvpn.com")! // swiftlint:disable:this all
     static let uuid = UIDevice.current.identifierForVendor!.uuidString
-}
-
-struct DNSBases {
-    static let roots = ["foolvpn.com"]
-    static let http_dns_roots:[String] = [] // swiftlint:disable:this all
-}
-
-struct UserDefaultsKeys {
-    static let sessionId = "sessionId"
-    static let mode = "mode"
-    static let activeArea = "VPNDataAccess.activeArea"
-    static let receipt = "iapReceipt"
-}
-
-let areaTableItemIdentifier = "AreaTableItem"
-
-var showAlert = true
-
-enum goodType { // swiftlint:disable:this all
-    static let basic = 4
-    static let premium = 5
-    static let traffic = 6
-    static let basic_to_premium = 40 // swiftlint:disable:this all
 }
 
 let countryCodes = [
@@ -286,15 +262,3 @@ let countryCodes = [
     ["South Africa", "27"],
     ["Zambia", "260"],
     ["Zimbabwe", "263"]]
-
-// 正式广告id
-#if DEBUG
-// 测试广告id
-let GADInterstitialUnitId = "ca-app-pub-3940256099942544/4411468910"
-let GADRewardBasedVideoAdId = "ca-app-pub-3940256099942544/1712485313"
-let GADNativeAdId = "ca-app-pub-3940256099942544/3986624511"
-#else
-let GADInterstitialUnitId = "ca-app-pub-2489079192172828/1872385721"
-let GADRewardBasedVideoAdId = "ca-app-pub-2489079192172828/2096873086"
-let GADNativeAdId = "ca-app-pub-2489079192172828/5937577643"
-#endif
