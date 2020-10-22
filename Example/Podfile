@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Egret_Example' do
+  pod 'Egret', :path => '../'
+
+  target 'Egret_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
