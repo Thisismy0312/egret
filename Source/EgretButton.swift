@@ -9,66 +9,106 @@
 import UIKit
 
 open class EgretButton: UIView {
-    var backAction: (() -> Void)?
+    open var backAction: (() -> Void)?
 
-    let title = UILabel()
+    let titleLabel = UILabel()
     
     var state = false
     
     let gradientLayer = CAGradientLayer.init()
     
-    private var strs: String = "nil"
-    var str: String {
+    private var titles: String = "nil"
+    open var title: String {
         get {
-            return strs
+            return titles
         }
         set {
-            strs = newValue
+            titles = newValue
             self.setLabel()
         }
     }
     
     private var fonts: UIFont = UIFont.My.pingfang(12, .medium)
-    var font: UIFont {
+    open var font: UIFont {
         get {
             return fonts
         }
         
         set {
             fonts = newValue
-            title.font = fonts
+            titleLabel.font = fonts
+        }
+    }
+    
+    private var colorHeads: UIColor = UIColor.My.gold1
+    open var colorHead: UIColor {
+        get {
+            return colorHeads
+        }
+        set {
+            colorHeads = newValue
+            setColor()
+        }
+    }
+    
+    private var colorTails: UIColor = UIColor.My.gold1
+    open var colorTail: UIColor {
+        get {
+            return colorTails
+        }
+        set {
+            colorTails = newValue
+            setColor()
+        }
+    }
+    
+    private var titleColors: UIColor = UIColor(hex: 0xAD6E26)
+    open var titleColor: UIColor {
+        get {
+            return titleColors
+        }
+        
+        set {
+            titleColors = newValue
+            titleLabel.textColor = titleColors
         }
     }
     
     private func setLabel() {
-        title.text = strs
+        titleLabel.text = titles
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        gradientLayer.colors = [UIColor.My.gold1.cgColor, UIColor.My.gold2.cgColor]
-        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0)
+        setColor()
         
         self.layer.addSublayer(gradientLayer)
         self.layer.masksToBounds = true
         
-        self.addSubview(title)
+        self.addSubview(titleLabel)
         
-        title.textColor = UIColor(hex: 0xAD6E26)
-        title.text = "Egret"
-        title.textAlignment = .center
+        titleLabel.textColor = titleColors
+        titleLabel.text = "Egret"
+        titleLabel.textAlignment = .center
         
-        title.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         setLayout()
         self.layer.cornerRadius = 5
     }
+    
+    func setColor() {
+        gradientLayer.colors = [colorHeads.cgColor, colorTails.cgColor]
+        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0)
+//        self.layoutIfNeeded()
+//        layoutSubviews()
+    }
 
     func setLayout() {
-        title.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
     
     open override func layoutSubviews() {

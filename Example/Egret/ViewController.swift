@@ -61,6 +61,11 @@ class ViewController: UIViewController {
         button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.topAnchor.constraint(equalTo: codeInput.bottomAnchor, constant: 20).isActive = true
+        button.colorHead = .purple
+        button.colorTail = .blue
+        button.title = "Hello!"
+        button.titleColor = .white
+        button.backAction = { print("Nice Click!") }
     }
 
     override func didReceiveMemoryWarning() {
