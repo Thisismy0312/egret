@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     let phoneInput = EgretInputView()
     let codeInput = EgretInputView()
+    let button = EgretButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
         
         view.addSubview(phoneInput)
         view.addSubview(codeInput)
+        view.addSubview(button)
         
         setInputGroup()
     }
@@ -53,6 +55,12 @@ class ViewController: UIViewController {
             
         }
         codeInput.layoutIfNeeded()
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        button.topAnchor.constraint(equalTo: codeInput.bottomAnchor, constant: 20).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
