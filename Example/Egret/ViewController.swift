@@ -66,6 +66,8 @@ class ViewController: UIViewController {
         button.title = "Hello!"
         button.titleColor = .white
         button.backAction = { print("Nice Click!") }
+        button.startPoint = CGPoint(x: 0, y: 0)
+        button.endPoint = CGPoint(x: 0, y: 1)
     }
 
     override func didReceiveMemoryWarning() {

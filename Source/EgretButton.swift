@@ -74,6 +74,30 @@ open class EgretButton: UIView {
         }
     }
     
+    private var startPoints: CGPoint = CGPoint.init(x: 0, y: 1)
+    open var startPoint: CGPoint {
+        get {
+            return startPoints
+        }
+        
+        set {
+            startPoints = newValue
+            setColor()
+        }
+    }
+    
+    private var endPoints: CGPoint = CGPoint.init(x: 1, y: 1)
+    open var endPoint: CGPoint {
+        get {
+            return endPoints
+        }
+        
+        set {
+            endPoints = newValue
+            setColor()
+        }
+    }
+    
     private func setLabel() {
         titleLabel.text = titles
     }
@@ -100,10 +124,8 @@ open class EgretButton: UIView {
     
     func setColor() {
         gradientLayer.colors = [colorHeads.cgColor, colorTails.cgColor]
-        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0)
-//        self.layoutIfNeeded()
-//        layoutSubviews()
+        gradientLayer.startPoint = startPoints
+        gradientLayer.endPoint = endPoints
     }
 
     func setLayout() {
