@@ -68,6 +68,7 @@ class ViewController: UIViewController {
         button.backAction = { print("Nice Click!") }
         button.startPoint = CGPoint(x: 0, y: 0)
         button.endPoint = CGPoint(x: 0, y: 1)
+        button.radius = 20
     }
 
     override func didReceiveMemoryWarning() {

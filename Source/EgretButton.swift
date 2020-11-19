@@ -28,6 +28,17 @@ open class EgretButton: UIView {
         }
     }
     
+    private var radiuss: CGFloat = 4
+    open var radius: CGFloat {
+        get {
+            return radiuss
+        }
+        set {
+            radiuss = newValue
+            self.layer.cornerRadius = radiuss
+        }
+    }
+    
     private var fonts: UIFont = UIFont.My.pingfang(12, .medium)
     open var font: UIFont {
         get {
