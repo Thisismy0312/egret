@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EgretHeaderView: UIView {
+open class EgretHeaderView: UIView {
     
     let titleView = UIView()
     let titleLabel = UILabel()
@@ -109,8 +109,6 @@ class EgretHeaderView: UIView {
         titleLabel.text = title
         titleLabel.font = font
         titleLabel.textColor = titleColor
-        
-//        setConstraints()
     }
     
     private func setLabel() {
@@ -118,8 +116,6 @@ class EgretHeaderView: UIView {
     }
     
     func setSafeArea(_ safeArea: CGFloat) {
-//        setConstraints()
-        
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -147,7 +143,7 @@ class EgretHeaderView: UIView {
         gradientLayer.frame = self.bounds
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

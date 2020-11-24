@@ -11,8 +11,10 @@ open class HeaderViewController: UIViewController {
 
     var safeAreaTop: CGFloat = 20
     var safeAreaBottom: CGFloat = 0
-    let headerView = EgretHeaderView()
+    open var headerView = EgretHeaderView()
     open var contentView = UIView()
+    let backArrow = UIImageView()
+    var arrow = UIImage(named: "backarrow", in: Resources.bundle, compatibleWith: nil)
     
     open var headTitle: String {
         get {
@@ -52,7 +54,6 @@ open class HeaderViewController: UIViewController {
         }
     }
     
-    private var titleColors: UIColor = UIColor(hex: 0xFFFFFF)
     open var titleColor: UIColor {
         get {
             return headerView.titleColor
@@ -73,7 +74,6 @@ open class HeaderViewController: UIViewController {
         }
     }
     
-    private var endPoints: CGPoint = CGPoint.init(x: 1, y: 1)
     open var endPoint: CGPoint {
         get {
             return headerView.endPoint
@@ -84,11 +84,37 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var needArrows: Bool = false
+    open var needArrow: Bool {
+        get {
+            return needArrows
+        }
+        
+        set {
+            needArrows = newValue
+            backArrow.isHidden = !needArrows
+        }
+    }
+    
+    private var arrowActions: (() -> Void)?
+    open var arrowAction: (() -> Void)? {
+        get {
+            return arrowActions
+        }
+        
+        set {
+            arrowActions = newValue
+        }
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(headerView)
         view.addSubview(contentView)
+        
+        backArrow.image = arrow
+        headerView.addSubview(backArrow)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -101,6 +127,16 @@ open class HeaderViewController: UIViewController {
         contentView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         contentView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        backArrow.translatesAutoresizingMaskIntoConstraints = false
+        backArrow.translatesAutoresizingMaskIntoConstraints = false
+        backArrow.centerYAnchor.constraint(equalTo: headerView.titleLabel.centerYAnchor).isActive = true
+        backArrow.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,constant: 15).isActive = true
+        backArrow.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        backArrow.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        backArrow.isUserInteractionEnabled = true
+        backArrow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backArrowClick)))
     }
     
     open override func viewDidLayoutSubviews() {
@@ -117,5 +153,11 @@ open class HeaderViewController: UIViewController {
         
         headerView.setSafeArea(safeAreaTop)
         view.layoutIfNeeded()
+    }
+}
+
+extension HeaderViewController {
+    @objc func backArrowClick() {
+        if let action = arrowActions { action() }
     }
 }

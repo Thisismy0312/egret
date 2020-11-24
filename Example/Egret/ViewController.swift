@@ -23,6 +23,11 @@ class ViewController: HeaderViewController {
         contentView.addSubview(codeInput)
         contentView.addSubview(button)
         
+        needArrow = false
+        arrowAction = {
+            print("GA GA GA !!!")
+        }
+        
         setInputGroup()
     }
     
