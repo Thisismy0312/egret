@@ -74,6 +74,8 @@ class ViewController: HeaderViewController {
         button.startPoint = CGPoint(x: 0, y: 1)
         button.endPoint = CGPoint(x: 1, y: 1)
         button.radius = 20
+        button.icon = nil
+        button.layoutIfNeeded()
     }
 
     override func didReceiveMemoryWarning() {

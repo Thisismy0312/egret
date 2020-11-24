@@ -10,7 +10,10 @@ import UIKit
 
 open class EgretButton: UIView {
     open var backAction: (() -> Void)?
-
+    
+    let stackView = UIStackView()
+    let stackImage = UIImageView()
+    
     let titleLabel = UILabel()
     
     var state = false
@@ -109,6 +112,28 @@ open class EgretButton: UIView {
         }
     }
     
+    private var icons: UIImage? = UIImage(named: "backarrow", in: Resources.bundle, compatibleWith: nil)
+    open var icon: UIImage? {
+        get {
+            return icons
+        }
+        
+        set {
+            if newValue == nil, icons != nil{
+                stackView.removeArrangedSubview(stackImage)
+            } else if icons == nil {
+                stackView.insertArrangedSubview(stackImage, at: 0)
+            } else if icons != nil {
+                
+            }
+            
+            icons = newValue
+            stackImage.image = icons
+            
+            layoutIfNeeded()
+        }
+    }
+    
     private func setLabel() {
         titleLabel.text = titles
     }
@@ -121,7 +146,11 @@ open class EgretButton: UIView {
         self.layer.addSublayer(gradientLayer)
         self.layer.masksToBounds = true
         
-        self.addSubview(titleLabel)
+        self.addSubview(stackView)
+        
+        stackImage.image = icons
+        
+        setStackView()
         
         titleLabel.textColor = titleColors
         titleLabel.text = "Egret"
@@ -129,8 +158,16 @@ open class EgretButton: UIView {
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        setLayout()
+        setConstraints()
         self.layer.cornerRadius = 5
+    }
+    
+    func setStackView() {
+        stackView.addArrangedSubview(stackImage)
+        stackView.addArrangedSubview(titleLabel)
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 10
     }
     
     func setColor() {
@@ -139,9 +176,14 @@ open class EgretButton: UIView {
         gradientLayer.endPoint = endPoints
     }
 
-    func setLayout() {
-        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    func setConstraints() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        stackImage.translatesAutoresizingMaskIntoConstraints = false
+        stackImage.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        stackImage.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
     open override func layoutSubviews() {
