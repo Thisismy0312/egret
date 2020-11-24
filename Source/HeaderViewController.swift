@@ -14,6 +14,76 @@ open class HeaderViewController: UIViewController {
     let headerView = EgretHeaderView()
     open var contentView = UIView()
     
+    open var headTitle: String {
+        get {
+            return headerView.title
+        }
+        
+        set {
+            headerView.title = newValue
+        }
+    }
+    
+    open var headFont: UIFont {
+        get {
+            return headerView.font
+        }
+        
+        set {
+            headerView.font = newValue
+        }
+    }
+    
+    open var colorHead: UIColor {
+        get {
+            return headerView.colorHead
+        }
+        set {
+            headerView.colorHead = newValue
+        }
+    }
+    
+    open var colorTail: UIColor {
+        get {
+            return headerView.colorTail
+        }
+        set {
+            headerView.colorTail = newValue
+        }
+    }
+    
+    private var titleColors: UIColor = UIColor(hex: 0xFFFFFF)
+    open var titleColor: UIColor {
+        get {
+            return headerView.titleColor
+        }
+        
+        set {
+            headerView.titleColor = newValue
+        }
+    }
+    
+    open var startPoint: CGPoint {
+        get {
+            return headerView.startPoint
+        }
+        
+        set {
+            headerView.startPoint = newValue
+        }
+    }
+    
+    private var endPoints: CGPoint = CGPoint.init(x: 1, y: 1)
+    open var endPoint: CGPoint {
+        get {
+            return headerView.endPoint
+        }
+        
+        set {
+            headerView.endPoint = newValue
+        }
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
