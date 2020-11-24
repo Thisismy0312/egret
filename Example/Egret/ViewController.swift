@@ -9,9 +9,8 @@
 import UIKit
 import Egret
 
-class ViewController: UIViewController {
+class ViewController: HeaderViewController {
     
-    let headerView = EgretHeaderView()
     let phoneInput = EgretInputView()
     let codeInput = EgretInputView()
     let button = EgretButton()
@@ -20,23 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.addSubview(headerView)
-        view.addSubview(phoneInput)
-        view.addSubview(codeInput)
-        view.addSubview(button)
+        contentView.addSubview(phoneInput)
+        contentView.addSubview(codeInput)
+        contentView.addSubview(button)
         
-        setHeader()
         setInputGroup()
-    }
-    
-    func setHeader() {
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        headerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        headerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        headerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        headerView.title = "Egret"
     }
     
     func setInputGroup() {
@@ -46,9 +33,9 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         phoneInput.translatesAutoresizingMaskIntoConstraints = false
-        phoneInput.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        phoneInput.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 50).isActive = true
-        phoneInput.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.893).isActive = true
+        phoneInput.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        phoneInput.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 50).isActive = true
+        phoneInput.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.893).isActive = true
         phoneInput.heightAnchor.constraint(equalToConstant: 37).isActive = true
         phoneInput.title = "手机"
         phoneInput.haveCodeSelect = true
@@ -56,7 +43,7 @@ class ViewController: UIViewController {
         phoneInput.layoutIfNeeded()
         
         codeInput.translatesAutoresizingMaskIntoConstraints = false
-        codeInput.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        codeInput.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         codeInput.topAnchor.constraint(equalTo: phoneInput.bottomAnchor, constant: 10).isActive = true
         codeInput.widthAnchor.constraint(equalTo: phoneInput.widthAnchor).isActive = true
         codeInput.heightAnchor.constraint(equalTo: phoneInput.heightAnchor).isActive = true
@@ -70,17 +57,17 @@ class ViewController: UIViewController {
         codeInput.layoutIfNeeded()
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.8).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.topAnchor.constraint(equalTo: codeInput.bottomAnchor, constant: 20).isActive = true
-        button.colorHead = .purple
-        button.colorTail = .blue
+        button.colorHead = UIColor(hex: 0xEDCC99)
+        button.colorTail = UIColor(hex: 0xC4925A)
         button.title = "Hello!"
         button.titleColor = .white
         button.backAction = { print("Nice Click!") }
-        button.startPoint = CGPoint(x: 0, y: 0)
-        button.endPoint = CGPoint(x: 0, y: 1)
+        button.startPoint = CGPoint(x: 0, y: 1)
+        button.endPoint = CGPoint(x: 1, y: 1)
         button.radius = 20
     }
 
@@ -98,3 +85,13 @@ extension ViewController {
     }
 }
 
+extension UIColor {
+    convenience init(hex:Int, alpha:CGFloat = 1.0) {
+        self.init(
+            red:   CGFloat((hex & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((hex & 0x00FF00) >> 8)  / 255.0,
+            blue:  CGFloat((hex & 0x0000FF) >> 0)  / 255.0,
+            alpha: alpha
+        )
+    }
+}

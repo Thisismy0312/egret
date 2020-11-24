@@ -14,7 +14,7 @@ class EgretHeaderView: UIView {
     
     let gradientLayer = CAGradientLayer.init()
     
-    private var titles: String = "nil"
+    private var titles: String = "Egret"
     open var title: String {
         get {
             return titles
@@ -37,7 +37,7 @@ class EgretHeaderView: UIView {
         }
     }
     
-    private var colorHeads: UIColor = UIColor.My.red1
+    private var colorHeads: UIColor = UIColor.My.blue1
     open var colorHead: UIColor {
         get {
             return colorHeads
@@ -48,7 +48,7 @@ class EgretHeaderView: UIView {
         }
     }
     
-    private var colorTails: UIColor = UIColor.My.red2
+    private var colorTails: UIColor = UIColor.My.blue2
     open var colorTail: UIColor {
         get {
             return colorTails
@@ -106,25 +106,25 @@ class EgretHeaderView: UIView {
         addSubview(titleView)
         titleView.addSubview(titleLabel)
         
-        titleView.backgroundColor = .green
-        
         titleLabel.text = title
         titleLabel.font = font
         titleLabel.textColor = titleColor
         
-        setConstraints()
+//        setConstraints()
     }
     
     private func setLabel() {
         titleLabel.text = titles
     }
     
-    func setConstraints() {
+    func setSafeArea(_ safeArea: CGFloat) {
+//        setConstraints()
+        
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         titleView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        titleView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        titleView.topAnchor.constraint(equalTo: self.topAnchor, constant: safeArea).isActive = true
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor).isActive = true

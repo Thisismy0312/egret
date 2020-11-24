@@ -28,6 +28,9 @@ extension UIColor {
         
         static var red1: UIColor { return UIColor(hex: 0xFB5257) }
         static var red2: UIColor { return UIColor(hex: 0xF42944) }
+        
+        static var blue1: UIColor { return UIColor(hex: 0x3576E1) }
+        static var blue2: UIColor { return UIColor(hex: 0x234FCC) }
     }
 }
 
