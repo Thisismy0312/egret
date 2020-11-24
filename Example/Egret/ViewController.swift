@@ -70,11 +70,11 @@ class ViewController: HeaderViewController {
         button.colorTail = UIColor(hex: 0xC4925A)
         button.title = "Hello!"
         button.titleColor = .white
-        button.backAction = { print("Nice Click!") }
+        button.backAction = { self.button.icon = UIImage(named: "iconmac") }
         button.startPoint = CGPoint(x: 0, y: 1)
         button.endPoint = CGPoint(x: 1, y: 1)
         button.radius = 20
-        button.icon = nil
+//        button.icon = nil
         button.layoutIfNeeded()
     }
 

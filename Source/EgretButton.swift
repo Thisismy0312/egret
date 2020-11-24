@@ -112,7 +112,7 @@ open class EgretButton: UIView {
         }
     }
     
-    private var icons: UIImage? = UIImage(named: "backarrow", in: Resources.bundle, compatibleWith: nil)
+    private var icons: UIImage?
     open var icon: UIImage? {
         get {
             return icons
@@ -163,7 +163,7 @@ open class EgretButton: UIView {
     }
     
     func setStackView() {
-        stackView.addArrangedSubview(stackImage)
+//        stackView.addArrangedSubview(stackImage)
         stackView.addArrangedSubview(titleLabel)
         stackView.axis = .horizontal
         stackView.alignment = .center
