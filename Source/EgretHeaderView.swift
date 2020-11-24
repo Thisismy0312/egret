@@ -9,13 +9,23 @@ import UIKit
 
 class EgretHeaderView: UIView {
     
-    var safeAreaTop: CGFloat = 20
     let titleView = UIView()
     let titleLabel = UILabel()
     
     let gradientLayer = CAGradientLayer.init()
     
-    private var fonts: UIFont = UIFont.My.pingfang(12, .medium)
+    private var titles: String = "nil"
+    open var title: String {
+        get {
+            return titles
+        }
+        set {
+            titles = newValue
+            self.setLabel()
+        }
+    }
+    
+    private var fonts: UIFont = UIFont.My.pingfang(18, .medium)
     open var font: UIFont {
         get {
             return fonts
@@ -27,7 +37,7 @@ class EgretHeaderView: UIView {
         }
     }
     
-    private var colorHeads: UIColor = UIColor.My.gold1
+    private var colorHeads: UIColor = UIColor.My.red1
     open var colorHead: UIColor {
         get {
             return colorHeads
@@ -38,7 +48,7 @@ class EgretHeaderView: UIView {
         }
     }
     
-    private var colorTails: UIColor = UIColor.My.gold1
+    private var colorTails: UIColor = UIColor.My.red2
     open var colorTail: UIColor {
         get {
             return colorTails
@@ -49,7 +59,7 @@ class EgretHeaderView: UIView {
         }
     }
     
-    private var titleColors: UIColor = UIColor(hex: 0xAD6E26)
+    private var titleColors: UIColor = UIColor(hex: 0xFFFFFF)
     open var titleColor: UIColor {
         get {
             return titleColors
@@ -61,7 +71,7 @@ class EgretHeaderView: UIView {
         }
     }
     
-    private var startPoints: CGPoint = CGPoint.init(x: 0, y: 1)
+    private var startPoints: CGPoint = CGPoint.init(x: 1, y: 0)
     open var startPoint: CGPoint {
         get {
             return startPoints
@@ -85,15 +95,8 @@ class EgretHeaderView: UIView {
         }
     }
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        if #available(iOS 11.0, *) {
-            if let window = UIApplication.shared.keyWindow {
-                safeAreaTop = window.safeAreaInsets.top
-            }
-        }
         
         setColor()
         
@@ -102,6 +105,30 @@ class EgretHeaderView: UIView {
         
         addSubview(titleView)
         titleView.addSubview(titleLabel)
+        
+        titleView.backgroundColor = .green
+        
+        titleLabel.text = title
+        titleLabel.font = font
+        titleLabel.textColor = titleColor
+        
+        setConstraints()
+    }
+    
+    private func setLabel() {
+        titleLabel.text = titles
+    }
+    
+    func setConstraints() {
+        titleView.translatesAutoresizingMaskIntoConstraints = false
+        titleView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        titleView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        titleView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        titleView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: titleView.centerYAnchor).isActive = true
     }
     
     func setColor() {

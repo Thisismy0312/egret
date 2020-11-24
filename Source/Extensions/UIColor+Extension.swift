@@ -25,6 +25,9 @@ extension UIColor {
         
         static var gold1: UIColor { return UIColor(hex: 0xF8DD96) }
         static var gold2: UIColor { return UIColor(hex: 0xF5C468) }
+        
+        static var red1: UIColor { return UIColor(hex: 0xFB5257) }
+        static var red2: UIColor { return UIColor(hex: 0xF42944) }
     }
 }
 

@@ -11,6 +11,7 @@ import Egret
 
 class ViewController: UIViewController {
     
+    let headerView = EgretHeaderView()
     let phoneInput = EgretInputView()
     let codeInput = EgretInputView()
     let button = EgretButton()
@@ -19,11 +20,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        view.addSubview(headerView)
         view.addSubview(phoneInput)
         view.addSubview(codeInput)
         view.addSubview(button)
         
+        setHeader()
         setInputGroup()
+    }
+    
+    func setHeader() {
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        headerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        headerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        headerView.title = "Egret"
     }
     
     func setInputGroup() {
@@ -34,7 +47,7 @@ class ViewController: UIViewController {
         
         phoneInput.translatesAutoresizingMaskIntoConstraints = false
         phoneInput.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        phoneInput.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        phoneInput.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 50).isActive = true
         phoneInput.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.893).isActive = true
         phoneInput.heightAnchor.constraint(equalToConstant: 37).isActive = true
         phoneInput.title = "手机"
