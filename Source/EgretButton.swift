@@ -218,7 +218,7 @@ open class EgretButton: UIView {
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard isEnableds else { return }
+//        guard isEnableds else { return }
         if state {
             self.state = false
             self.alpha = 1
@@ -228,7 +228,7 @@ open class EgretButton: UIView {
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard isEnableds else { return }
+//        guard isEnableds else { return }
         if state {
             self.alpha = 1
             state = false
