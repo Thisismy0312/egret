@@ -112,6 +112,18 @@ open class EgretButton: UIView {
         }
     }
     
+    private var isEnableds: Bool = true
+    open var isEnabled: Bool {
+        get {
+            return isEnableds
+        }
+        
+        set {
+            isEnableds = newValue
+            setColor()
+        }
+    }
+    
     private var icons: UIImage?
     open var icon: UIImage? {
         get {
@@ -160,6 +172,9 @@ open class EgretButton: UIView {
         
         setConstraints()
         self.layer.cornerRadius = 5
+        
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clicked)))
     }
     
     func setStackView() {
@@ -171,7 +186,7 @@ open class EgretButton: UIView {
     }
     
     func setColor() {
-        gradientLayer.colors = [colorHeads.cgColor, colorTails.cgColor]
+        gradientLayer.colors = isEnableds ? [colorHeads.cgColor, colorTails.cgColor] : [UIColor(hex: 0xB3B3B3).cgColor, UIColor(hex: 0xB3B3B3).cgColor]
         gradientLayer.startPoint = startPoints
         gradientLayer.endPoint = endPoints
     }
@@ -197,11 +212,13 @@ open class EgretButton: UIView {
     }
     
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard isEnableds else { return }
         self.state = true
         self.alpha = 0.6
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard isEnableds else { return }
         if state {
             self.state = false
             self.alpha = 1
@@ -211,9 +228,9 @@ open class EgretButton: UIView {
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard isEnableds else { return }
         if state {
             self.alpha = 1
-            if let callback = backAction { callback() }
             state = false
         }
     }
@@ -222,4 +239,11 @@ open class EgretButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+}
+
+extension EgretButton {
+    @objc func clicked() {
+        guard isEnableds else { return }
+        if let callback = backAction { callback() }
+    }
 }
