@@ -20,16 +20,7 @@ it, simply add the following line to your Podfile:
 pod 'Egret'
 ```
 
-## Author
-
-Thisismy0312, qq867327466@163.com
-
 ## Contributors ✨
-
-致谢 ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
 
 <table>
   <tr>
