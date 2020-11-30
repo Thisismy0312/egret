@@ -14,7 +14,9 @@ open class HeaderViewController: UIViewController {
     open var headerView = EgretHeaderView()
     open var contentView = UIView()
     let backArrow = UIImageView()
-    var arrow = UIImage(named: "backarrow", in: Resources.bundle, compatibleWith: nil)
+    var arrow = UIImage(named: "icon_Header_Arrow", in: Resources.bundle, compatibleWith: nil)
+    let rightIcon = UIImageView()
+    var rightImg = UIImage(named: "icon_Header_Setting", in: Resources.bundle, compatibleWith: nil)
     
     open var headTitle: String {
         get {
@@ -96,6 +98,30 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var needRights: Bool = false
+    open var needRight: Bool {
+        get {
+            return needRights
+        }
+        
+        set {
+            needRights = newValue
+            rightIcon.isHidden = !needRights
+        }
+    }
+    
+    private var rightImages: UIImage?
+    open var rightImage: UIImage? {
+        get {
+            return rightImages
+        }
+        
+        set {
+            rightImages = newValue
+            rightIcon.image = rightImages
+        }
+    }
+    
     private var arrowActions: (() -> Void)?
     open var arrowAction: (() -> Void)? {
         get {
@@ -107,6 +133,17 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var rightActions: (() -> Void)?
+    open var rightAction: (() -> Void)? {
+        get {
+            return rightActions
+        }
+        
+        set {
+            rightActions = newValue
+        }
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -114,7 +151,10 @@ open class HeaderViewController: UIViewController {
         view.addSubview(contentView)
         
         backArrow.image = arrow
+        rightIcon.image = rightImg
+        
         headerView.addSubview(backArrow)
+        headerView.addSubview(rightIcon)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -129,14 +169,22 @@ open class HeaderViewController: UIViewController {
         contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         backArrow.translatesAutoresizingMaskIntoConstraints = false
-        backArrow.translatesAutoresizingMaskIntoConstraints = false
         backArrow.centerYAnchor.constraint(equalTo: headerView.titleLabel.centerYAnchor).isActive = true
         backArrow.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,constant: 15).isActive = true
         backArrow.widthAnchor.constraint(equalToConstant: 20).isActive = true
         backArrow.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
+        rightIcon.translatesAutoresizingMaskIntoConstraints = false
+        rightIcon.centerYAnchor.constraint(equalTo: headerView.titleLabel.centerYAnchor).isActive = true
+        rightIcon.trailingAnchor.constraint(equalTo: headerView.trailingAnchor,constant: -15).isActive = true
+        rightIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        rightIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
         backArrow.isUserInteractionEnabled = true
         backArrow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backArrowClick)))
+        
+        rightIcon.isUserInteractionEnabled = true
+        rightIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightClick)))
     }
     
     open override func viewDidLayoutSubviews() {
@@ -150,7 +198,6 @@ open class HeaderViewController: UIViewController {
             safeAreaBottom = bottomLayoutGuide.length
         }
         
-        
         headerView.setSafeArea(safeAreaTop)
         view.layoutIfNeeded()
     }
@@ -159,5 +206,9 @@ open class HeaderViewController: UIViewController {
 extension HeaderViewController {
     @objc func backArrowClick() {
         if let action = arrowActions { action() }
+    }
+    
+    @objc func rightClick() {
+        if let action = rightActions { action() }
     }
 }
