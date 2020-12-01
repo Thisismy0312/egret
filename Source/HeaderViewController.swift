@@ -17,6 +17,8 @@ open class HeaderViewController: UIViewController {
     var arrow = UIImage(named: "icon_Header_Arrow", in: Resources.bundle, compatibleWith: nil)
     let rightIcon = UIImageView()
     var rightImg = UIImage(named: "icon_Header_Setting", in: Resources.bundle, compatibleWith: nil)
+    let gradientLayer = CAGradientLayer.init()
+    let bgView = UIView()
     
     open var headTitle: String {
         get {
@@ -144,9 +146,22 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var needBgViews: Bool = false
+    open var needBgView: Bool {
+        get {
+            return needBgViews
+        }
+        
+        set {
+            needBgViews = newValue
+            bgView.isHidden = !needBgViews
+        }
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.addSubview(bgView)
         view.addSubview(headerView)
         view.addSubview(contentView)
         
@@ -155,6 +170,13 @@ open class HeaderViewController: UIViewController {
         
         headerView.addSubview(backArrow)
         headerView.addSubview(rightIcon)
+        
+        bgView.translatesAutoresizingMaskIntoConstraints = false
+        bgView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        bgView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        bgView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        bgView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        bgView.isHidden = true
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
