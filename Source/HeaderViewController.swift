@@ -18,7 +18,7 @@ open class HeaderViewController: UIViewController {
     let rightIcon = UIImageView()
     var rightImg = UIImage(named: "icon_Header_Setting", in: Resources.bundle, compatibleWith: nil)
     let gradientLayer = CAGradientLayer.init()
-    open let bgView = UIView()
+    open var bgView = UIView()
     
     open var headTitle: String {
         get {
