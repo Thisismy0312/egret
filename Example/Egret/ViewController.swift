@@ -28,8 +28,15 @@ class ViewController: HeaderViewController {
             print("GA GA GA !!!")
         }
         
+        needRight = false
         rightAction = {
             print("LA LA LA !!!")
+        }
+        
+        needRightLabel = true
+        rightLabel.text = "刷新"
+        rightLabelAction = {
+            print("HA HA HA !!!")
         }
         
         setInputGroup()

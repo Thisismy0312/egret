@@ -13,6 +13,7 @@ open class HeaderViewController: UIViewController {
     var safeAreaBottom: CGFloat = 0
     open var headerView = EgretHeaderView()
     open var contentView = UIView()
+    open var rightLabel = UILabel()
     let backArrow = UIImageView()
     var arrow = UIImage(named: "icon_Header_Arrow", in: Resources.bundle, compatibleWith: nil)
     let rightIcon = UIImageView()
@@ -112,6 +113,18 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var needRightLabels: Bool = false
+    open var needRightLabel: Bool {
+        get {
+            return needRightLabels
+        }
+        
+        set {
+            needRightLabels = newValue
+            rightLabel.isHidden = !needRightLabels
+        }
+    }
+    
     private var rightImages: UIImage?
     open var rightImage: UIImage? {
         get {
@@ -146,6 +159,17 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var rightLabelActions: (() -> Void)?
+    open var rightLabelAction: (() -> Void)? {
+        get {
+            return rightLabelActions
+        }
+        
+        set {
+            rightLabelActions = newValue
+        }
+    }
+    
     private var needBgViews: Bool = false
     open var needBgView: Bool {
         get {
@@ -170,6 +194,7 @@ open class HeaderViewController: UIViewController {
         
         headerView.addSubview(backArrow)
         headerView.addSubview(rightIcon)
+        headerView.addSubview(rightLabel)
         
         bgView.translatesAutoresizingMaskIntoConstraints = false
         bgView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -192,21 +217,32 @@ open class HeaderViewController: UIViewController {
         
         backArrow.translatesAutoresizingMaskIntoConstraints = false
         backArrow.centerYAnchor.constraint(equalTo: headerView.titleLabel.centerYAnchor).isActive = true
-        backArrow.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,constant: 15).isActive = true
+        backArrow.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 15).isActive = true
         backArrow.widthAnchor.constraint(equalToConstant: 20).isActive = true
         backArrow.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         rightIcon.translatesAutoresizingMaskIntoConstraints = false
         rightIcon.centerYAnchor.constraint(equalTo: headerView.titleLabel.centerYAnchor).isActive = true
-        rightIcon.trailingAnchor.constraint(equalTo: headerView.trailingAnchor,constant: -15).isActive = true
+        rightIcon.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -15).isActive = true
         rightIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
         rightIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        rightLabel.translatesAutoresizingMaskIntoConstraints = false
+        rightLabel.centerYAnchor.constraint(equalTo: headerView.titleLabel.centerYAnchor).isActive = true
+        rightLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -15).isActive = true
         
         backArrow.isUserInteractionEnabled = true
         backArrow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backArrowClick)))
         
         rightIcon.isUserInteractionEnabled = true
         rightIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightClick)))
+        
+        rightLabel.text = "编辑"
+        rightLabel.textColor = .white
+        rightLabel.font = UIFont.My.pingfang(15, .regular)
+        rightLabel.isHidden = true
+        rightLabel.isUserInteractionEnabled = true
+        rightLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightLabelClick)))
     }
     
     open override func viewDidLayoutSubviews() {
@@ -232,5 +268,9 @@ extension HeaderViewController {
     
     @objc func rightClick() {
         if let action = rightActions { action() }
+    }
+    
+    @objc func rightLabelClick() {
+        if let action = rightLabelActions { action() }
     }
 }
