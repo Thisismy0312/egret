@@ -182,6 +182,21 @@ open class HeaderViewController: UIViewController {
         }
     }
     
+    private var headerHeights: CGFloat = 100
+    open var headerHeight: CGFloat {
+        get {
+            return headerHeights
+        }
+        
+        set {
+            headerHeights = newValue
+            headerHeightLay.constant = headerHeights
+            headerView.updateConstraints()
+        }
+    }
+    
+    var headerHeightLay = NSLayoutConstraint()
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -207,7 +222,8 @@ open class HeaderViewController: UIViewController {
         headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         headerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         headerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        headerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        headerHeightLay = headerView.heightAnchor.constraint(equalToConstant: 100)
+        headerHeightLay.isActive = true
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

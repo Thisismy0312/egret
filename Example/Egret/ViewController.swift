@@ -43,6 +43,7 @@ class ViewController: HeaderViewController {
         }
         
         setInputGroup()
+        headerHeight = 80
     }
     
     func setInputGroup() {
