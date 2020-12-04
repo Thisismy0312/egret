@@ -7,10 +7,15 @@
 
 import UIKit
 
+public protocol SearchDelegate {
+    func returnAction(_ textField: UITextField)
+}
+
 open class EgretSearchInputView: UIView {
     
     private let searchIcon = UIImageView()
     private let contentInput = UITextField()
+    open var delegate: SearchDelegate?
     
     private var borderColors: UIColor = UIColor(hex: 0xCCCCCC)
     open var borderColor: UIColor {
@@ -120,6 +125,8 @@ open class EgretSearchInputView: UIView {
         contentInput.attributedPlaceholder = NSAttributedString(string: placeHolders, attributes: [NSAttributedString.Key.foregroundColor: placeHolderColors])
         contentInput.textColor = textColor
         contentInput.clearButtonMode = clearButtonModes
+        contentInput.returnKeyType = .search
+        contentInput.delegate = self
         
         searchIcon.image = icons
         
@@ -155,5 +162,12 @@ open class EgretSearchInputView: UIView {
     open override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         self.layer.cornerRadius = self.bounds.height * 0.5
+    }
+}
+
+extension EgretSearchInputView: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.returnAction(textField)
+        return true
     }
 }

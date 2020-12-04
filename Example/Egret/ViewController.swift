@@ -84,6 +84,7 @@ class ViewController: HeaderViewController {
         searchView.placeHolderColor = UIColor(hex: 0xCCCCCC)
         searchView.icon = UIImage(named: "icon_Search_Black")
         searchView.backgroundColor = .clear
+        searchView.delegate = self
         searchView.layoutIfNeeded()
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +111,10 @@ class ViewController: HeaderViewController {
 
 }
 
-extension ViewController {
+extension ViewController: SearchDelegate {
+    func returnAction(_ textField: UITextField) {
+        print(textField.text)
+    }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
