@@ -15,6 +15,8 @@ class ViewController: HeaderViewController {
     let codeInput = EgretInputView()
     let button = EgretButton()
     
+    let searchView = EgretSearchInputView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,6 +24,7 @@ class ViewController: HeaderViewController {
         contentView.addSubview(phoneInput)
         contentView.addSubview(codeInput)
         contentView.addSubview(button)
+        contentView.addSubview(searchView)
         
         needArrow = false
         arrowAction = {
@@ -72,11 +75,22 @@ class ViewController: HeaderViewController {
         }
         codeInput.layoutIfNeeded()
         
+        searchView.translatesAutoresizingMaskIntoConstraints = false
+        searchView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        searchView.topAnchor.constraint(equalTo: codeInput.bottomAnchor, constant: 10).isActive = true
+        searchView.widthAnchor.constraint(equalTo: codeInput.widthAnchor).isActive = true
+        searchView.heightAnchor.constraint(equalTo: codeInput.heightAnchor).isActive = true
+        searchView.placeHolder = "Search"
+        searchView.placeHolderColor = UIColor(hex: 0xCCCCCC)
+        searchView.icon = UIImage(named: "icon_Search_Black")
+        searchView.backgroundColor = .clear
+        searchView.layoutIfNeeded()
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.8).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        button.topAnchor.constraint(equalTo: codeInput.bottomAnchor, constant: 20).isActive = true
+        button.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 20).isActive = true
         button.colorHead = UIColor(hex: 0xEDCC99)
         button.colorTail = UIColor(hex: 0xC4925A)
         button.title = "Hello!"
@@ -86,6 +100,7 @@ class ViewController: HeaderViewController {
         button.endPoint = CGPoint(x: 1, y: 1)
         button.radius = 20
         button.layoutIfNeeded()
+        
     }
 
     override func didReceiveMemoryWarning() {
