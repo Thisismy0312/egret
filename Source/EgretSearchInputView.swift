@@ -94,6 +94,18 @@ open class EgretSearchInputView: UIView {
         }
     }
     
+    private var clearButtonModes: UITextField.ViewMode = .whileEditing
+    open var clearButtonMode: UITextField.ViewMode {
+        get {
+            return clearButtonModes
+        }
+        
+        set {
+            clearButtonModes = newValue
+            contentInput.clearButtonMode = clearButtonModes
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -107,6 +119,7 @@ open class EgretSearchInputView: UIView {
         contentInput.leftViewMode = .always
         contentInput.attributedPlaceholder = NSAttributedString(string: placeHolders, attributes: [NSAttributedString.Key.foregroundColor: placeHolderColors])
         contentInput.textColor = textColor
+        contentInput.clearButtonMode = clearButtonModes
         
         searchIcon.image = icons
         
