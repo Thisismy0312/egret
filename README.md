@@ -20,6 +20,45 @@ it, simply add the following line to your Podfile:
 pod 'Egret'
 ```
 
+## Useage
+
+```swift
+import Egret
+```
+
+### Example
+
+#### EgretButton
+
+```swift
+let button = EgretButton()
+
+button.colorHead = UIColor(hex: 0xEDCC99)             // Heade color of EgretButton
+button.colorTail = UIColor(hex: 0xC4925A)             // Tail color of EgretButton
+button.title = "Hello!"                               // Title of EgretButton
+button.titleColor = .white                            // The color of button title
+button.backAction = { self.button.isEnabled = false } // Click action of EgretButton
+button.startPoint = CGPoint(x: 0, y: 1)               // Start position of gradient layer
+button.endPoint = CGPoint(x: 1, y: 1)                 // End position of gradient layer
+button.radius = 20                                    // Corner radius of EgretButton
+```
+
+**EgretButton attributes**
+
+| attributes | type |
+|:------------:|:------:|
+|`colorHead`| UIColor|
+|`colorTail`|UIColor|
+|`titleColor`|UIColor|
+|`title`|String?|
+|`font`|UIFont|
+|`startPoint`|CGPoint|
+|`endPoint`|CGPoint|
+|`backAction`|(() -> Void)?|
+|`radius`|CGFloat|
+|`isEnabled`|Bool|
+|`icon`|UIImage?|
+
 ## Contributors ✨
 
 <table>
