@@ -7,6 +7,6 @@
 
 import Foundation
 
-class EgrateDatas {
-    static var radioButtonData: [String: String] = [:]
+open class EgretDatas {
+    public static var radioButtonData: [String: String] = [:]
 }

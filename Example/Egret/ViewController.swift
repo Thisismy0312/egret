@@ -132,7 +132,7 @@ class ViewController: HeaderViewController {
             
             item.group = "JobGroup"
             item.index = index
-//            item.selectedAction = { self.updateSelectedData() }
+            item.selectedAction = printRadioData
             item.checked = false
             item.title = radioData[index][0]
             item.value = radioData[index][1]
@@ -163,6 +163,10 @@ class ViewController: HeaderViewController {
         button.layoutIfNeeded()
     }
     
+    func printRadioData() {
+        print(EgretDatas.radioButtonData)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -172,7 +176,7 @@ class ViewController: HeaderViewController {
 
 extension ViewController: SearchDelegate {
     func returnAction(_ textField: UITextField) {
-        print(textField.text)
+//        print(textField.text)
     }
     
     @objc func dismissKeyboard() {

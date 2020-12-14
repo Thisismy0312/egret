@@ -113,7 +113,7 @@ open class EgretRadioButton: UIView {
             iconCheck.image = newValue ? checkedIcon : unCheckedIcon
             
             if newValue {
-                EgrateDatas.radioButtonData[groups] = value
+                EgretDatas.radioButtonData[groups] = value
                 if let action = selectedAction { action() }
             }
         }
