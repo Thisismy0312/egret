@@ -59,6 +59,9 @@ button.radius = 20                                    // Corner radius of EgretB
 |`isEnabled`|Bool|
 |`icon`|UIImage?|
 
+
+![image](Images/EgretButton.png)
+
 ## Contributors ✨
 
 <table>
