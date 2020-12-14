@@ -7,47 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05AE03B71C86FD64FA2D39C0DA36080F /* Egret-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4291B2D8AEEC59B92B3DC24DB563BE /* Egret-dummy.m */; };
 		103AA415950D600C9113E67915A3E595 /* Pods-Egret_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C50F7A29A88656C6DA52C7CC1409013C /* Pods-Egret_Example-dummy.m */; };
-		18B62A76CDD281F288105360BFC26B9F /* EgretButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEBBFAF36EBF6DD211225C557DAE8A0 /* EgretButton.swift */; };
-		2855D54BD517A21F041D78F76D3B6298 /* EgretHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469AB037CFA5FF4772074FDADDD9A52 /* EgretHeaderView.swift */; };
+		10A910233439EEF854C9AFE962C4B976 /* Egret.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BFB54F47E084BD6F440E143CF8AFBFB /* Egret.bundle */; };
+		1E7B3E0B7C13897DFD6B47E9B49313AB /* EgretButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E9F3BA77563E44BC42159E0C006BB /* EgretButton.swift */; };
+		26C12924ADC77FA4E8378214EEE8E530 /* EgretSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8640CA5FFC4E5F6C5BD9D3B4E816D /* EgretSearchInputView.swift */; };
 		29E336E3760AF66308101B5ACF7C741A /* Pods-Egret_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE69BAE8EE1AA86FCFDE373F51FB2B9D /* Pods-Egret_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		311C9832DF0A611BB26C21C38140D8AF /* Egret-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E46A14C4F6ADA16370520A927AA0469C /* Egret-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3524C2C52DE5CA8C49224EDC16E3B9CE /* Egret-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB847BB3F8781432F0513AD0F390485C /* Egret-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AB0CAF4722644E8CCFB41D6349BDBF0 /* CountryCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC6F556B3CA6DA2B0F75B38BFF26FF9 /* CountryCodeTableViewCell.swift */; };
+		3ABCE0206D57ED91C4CEAE1C8C21FF7C /* EgretHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F035D29C0BBC848D9CB5CFFF957320 /* EgretHeaderView.swift */; };
 		3B0B8665A1E53C23178DBE8EB556CA4B /* Pods-Egret_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D37D1032CACE529BC35D89A8BC162983 /* Pods-Egret_Tests-dummy.m */; };
+		3E2C178F5FEE75418E66046FEA50FC45 /* EgretCodeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C0E5DBF932B92228DF0F7D77DF77A /* EgretCodeSelectView.swift */; };
 		4011AD76D7C2E60AC00DCC51897E6022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		6F527FBA382654885683CA7F4C6B6A93 /* ThisClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530E7F1B15491741893E2EC830851763 /* ThisClass.swift */; };
-		7429CDF090787040E170B162E3D934F0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6C1DFB4E91B94740D4AAAB8762FC7 /* UIColor+Extension.swift */; };
-		79C814359916C20D7A15021EE7A08B92 /* EgretSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD2C7ECF7793BBE055475548AF5495F /* EgretSearchInputView.swift */; };
-		8398F8B07DEF64178E5575B1F761A076 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951AF106B5DFE050BACE330BB761C55 /* View+Extension.swift */; };
-		918C103FBCC3BD97AC5EAE3288BD1A42 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805DA8BA45192A3CF548BC3410EA78B /* UIFont+Extension.swift */; };
-		AFEB3D7A70FFC7B3F5E1B0508CCF4193 /* CountryCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F77B0FED73324D5D10B031EBC13E69 /* CountryCodeTableViewCell.swift */; };
-		B3177D27DAC729B8BD65EA437E9DBD1A /* EgretInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05788C4D11DCE8379BEC35D52CB080 /* EgretInputView.swift */; };
+		4DB32DF7CBC78E4A54D0D4562C5D82BA /* Egret-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ABBDDB425014DA235EB379AC32E819 /* Egret-dummy.m */; };
+		621C17499358BD008852F2ABFD368388 /* EgretInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296984513DEB2C4DC4BC842E7017801 /* EgretInputView.swift */; };
+		7442743CCC6E3287CCEF64E9BC42F0AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2219E3ACBFF512093B41D51CF9D03 /* Constants.swift */; };
+		905462E7298C04EAB8E6D67FE6A2F51A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1F49EE58C973F58D023234C8391D85 /* UIFont+Extension.swift */; };
+		9778B728B6D19D2F5290A86AD1C71941 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E52171B41B44732CF514625443C43 /* UIColor+Extension.swift */; };
+		A268D676C9EBC229DA4E5220CA1DEF18 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4FABFE572713F8789626092DA58967 /* HeaderViewController.swift */; };
+		A6404A2C15814A9668FDC8C51263A1EA /* ThisClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43FAA5AC18ABE437D28C5195DC03624 /* ThisClass.swift */; };
+		BDA2F676965A41B75E1FAEE8A61DDCE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446E1E1AEB0B8F902D79EE1AD1C7BAD1 /* Images.xcassets */; };
 		C3ABCC11CE0B426AF442747808D0365A /* Pods-Egret_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C099D7C45C3F6D69C6A0B839C030FC4C /* Pods-Egret_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF7FD9F649A34C29C7586B2ED38C9291 /* EgretCodeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D4771C1F11C9F29E9D558640836A4 /* EgretCodeSelectView.swift */; };
-		E386BF4FDAB8211BFBE3591B18919B40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23E92DD33DE5E10D4910F0549E0B55 /* Constants.swift */; };
-		E47D3C1507656D87E7B77DB6505225F8 /* Egret.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BFB54F47E084BD6F440E143CF8AFBFB /* Egret.bundle */; };
-		E64BCAF8196777FFF764A14A6756C45A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		F0C474C4E11C4D5F00817BB30C8609E7 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C894B1C3BB435720489794E9AE12B06 /* HeaderViewController.swift */; };
+		D0565456D785DF866968EC685092F903 /* EgretDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF31BB6A16EEBF226698AE736DEA78BD /* EgretDatas.swift */; };
+		E4ABF21328B06761D7680FCBA3D89B1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E59CC713509488D94C3F8768AD5A6CF3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72793F46FB806AB25F13D41D193848 /* View+Extension.swift */; };
+		E93EDF13501DCDB4710A1E3ABFE4480B /* EgretRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1772C7B66B9EEEA3EAE45DA7B886DE0C /* EgretRadioButton.swift */; };
 		F47CAACA16FE4AA340E185A577CE4823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		F7E890213B82939A3DF74BF845FFA4C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140046AD411DE373FA7DCA957EB4A5D2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4849E55CF4673C72B5E165F3DE13ED93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C49C2210D7073DC1C9DD49FA1EC7C0B;
-			remoteInfo = "Egret-Egret";
-		};
-		555734D559B63D047E1F6C64426CA453 /* PBXContainerItemProxy */ = {
+		3D63CB9E9A40CC7713D0A472A32033BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5A05E19F0C5CA48EB293B4426657F256;
 			remoteInfo = "Pods-Egret_Example";
 		};
-		BC94AA8692FDCA97F2C95D8C4F478893 /* PBXContainerItemProxy */ = {
+		4C87D7D3BF349D47B8C2B5EC9A8FE5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C49C2210D7073DC1C9DD49FA1EC7C0B;
+			remoteInfo = "Egret-Egret";
+		};
+		81788445904433C27EDE5A17AFE68622 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -57,56 +59,66 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0090A60894F6FCCE2D6DC1B340548920 /* Egret-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Egret-prefix.pch"; sourceTree = "<group>"; };
 		124B50BBC535B5465C115B2F7044E7E9 /* Pods-Egret_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Egret_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		140046AD411DE373FA7DCA957EB4A5D2 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		1772C7B66B9EEEA3EAE45DA7B886DE0C /* EgretRadioButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretRadioButton.swift; path = Source/EgretRadioButton.swift; sourceTree = "<group>"; };
 		191B362D28BEDE51D4C66C876BBC9345 /* Pods-Egret_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Egret_Example.modulemap"; sourceTree = "<group>"; };
 		1BFB54F47E084BD6F440E143CF8AFBFB /* Egret.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Egret.bundle; path = "Egret-Egret.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C894B1C3BB435720489794E9AE12B06 /* HeaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderViewController.swift; path = Source/HeaderViewController.swift; sourceTree = "<group>"; };
-		20A623888120649F8497815389B39B2C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2296984513DEB2C4DC4BC842E7017801 /* EgretInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretInputView.swift; path = Source/EgretInputView.swift; sourceTree = "<group>"; };
 		27A6C59BEBAC1CD7B64957825A76BA06 /* Pods-Egret_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Egret_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2E9D4771C1F11C9F29E9D558640836A4 /* EgretCodeSelectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EgretCodeSelectView.swift; sourceTree = "<group>"; };
-		32F77B0FED73324D5D10B031EBC13E69 /* CountryCodeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryCodeTableViewCell.swift; sourceTree = "<group>"; };
+		2A6C0E5DBF932B92228DF0F7D77DF77A /* EgretCodeSelectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EgretCodeSelectView.swift; sourceTree = "<group>"; };
 		403A14C8590302D1D7E94562CD692929 /* Pods-Egret_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Egret_Example-frameworks.sh"; sourceTree = "<group>"; };
+		41F035D29C0BBC848D9CB5CFFF957320 /* EgretHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretHeaderView.swift; path = Source/EgretHeaderView.swift; sourceTree = "<group>"; };
 		440C244495CC9580B5F7584C142B2379 /* Pods_Egret_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Egret_Tests.framework; path = "Pods-Egret_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		465DA559434BF6EEB83E4176F3B3FB45 /* Egret.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Egret.debug.xcconfig; sourceTree = "<group>"; };
+		446E1E1AEB0B8F902D79EE1AD1C7BAD1 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		4701546E4E1F85365576AF876C771624 /* Egret.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Egret.framework; path = Egret.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4805DA8BA45192A3CF548BC3410EA78B /* UIFont+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		4CC6F556B3CA6DA2B0F75B38BFF26FF9 /* CountryCodeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryCodeTableViewCell.swift; sourceTree = "<group>"; };
+		4D04FCDF6A8E34215C396862A21EA0E1 /* Egret.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Egret.debug.xcconfig; sourceTree = "<group>"; };
 		4D8C6D43F22249F19893C80314BA5CBA /* Pods-Egret_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Egret_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4DEBBFAF36EBF6DD211225C557DAE8A0 /* EgretButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretButton.swift; path = Source/EgretButton.swift; sourceTree = "<group>"; };
-		5190078FFECF8C11AB55C4EC8902881B /* Egret-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Egret-Info.plist"; sourceTree = "<group>"; };
-		530E7F1B15491741893E2EC830851763 /* ThisClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThisClass.swift; sourceTree = "<group>"; };
-		5E4291B2D8AEEC59B92B3DC24DB563BE /* Egret-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Egret-dummy.m"; sourceTree = "<group>"; };
+		4FE8640CA5FFC4E5F6C5BD9D3B4E816D /* EgretSearchInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretSearchInputView.swift; path = Source/EgretSearchInputView.swift; sourceTree = "<group>"; };
+		67DC6D8C6E1B7CDE1F223407FFE2748F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6C4FABFE572713F8789626092DA58967 /* HeaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderViewController.swift; path = Source/HeaderViewController.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		74732EF908AF7FB9D9199981C1DD35A7 /* Pods-Egret_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Egret_Example.release.xcconfig"; sourceTree = "<group>"; };
 		751518E1C9CF2D05A6442A73F98D13B2 /* Pods-Egret_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Egret_Tests.modulemap"; sourceTree = "<group>"; };
-		75B7CDDC2F54E1BF035668B57FD17404 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8469AB037CFA5FF4772074FDADDD9A52 /* EgretHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretHeaderView.swift; path = Source/EgretHeaderView.swift; sourceTree = "<group>"; };
-		8A4B01D620A4D0A938C070EDAD39297A /* Egret.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Egret.release.xcconfig; sourceTree = "<group>"; };
-		8E23E92DD33DE5E10D4910F0549E0B55 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9C32D08001C76B9C23866B0914CD4C30 /* Egret.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Egret.modulemap; sourceTree = "<group>"; };
+		77CB6BC0A9FED30C2A20331F085C5D6A /* Egret.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Egret.release.xcconfig; sourceTree = "<group>"; };
+		7DC392276D63434FC1D30652021162B3 /* Egret.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Egret.modulemap; sourceTree = "<group>"; };
+		8049E72A676711F33E45FECC3F8F78DC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		97484ACC6A6F2E05A3AB4B3836FC8CD7 /* Egret.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Egret.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A7128EAD4BD1B63D1335359E85D29BBA /* Pods-Egret_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Egret_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A931DE0E0E7BF6983036E1EE8EABA6DD /* Egret-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Egret-prefix.pch"; sourceTree = "<group>"; };
-		AA05788C4D11DCE8379BEC35D52CB080 /* EgretInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretInputView.swift; path = Source/EgretInputView.swift; sourceTree = "<group>"; };
-		ABD2C7ECF7793BBE055475548AF5495F /* EgretSearchInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretSearchInputView.swift; path = Source/EgretSearchInputView.swift; sourceTree = "<group>"; };
 		AE69BAE8EE1AA86FCFDE373F51FB2B9D /* Pods-Egret_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Egret_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B951AF106B5DFE050BACE330BB761C55 /* View+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		B82E52171B41B44732CF514625443C43 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B9ABBDDB425014DA235EB379AC32E819 /* Egret-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Egret-dummy.m"; sourceTree = "<group>"; };
 		C099D7C45C3F6D69C6A0B839C030FC4C /* Pods-Egret_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Egret_Example-umbrella.h"; sourceTree = "<group>"; };
 		C48162F7CBDEB3C66FE8D3CF783E10E0 /* Pods_Egret_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Egret_Example.framework; path = "Pods-Egret_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50F7A29A88656C6DA52C7CC1409013C /* Pods-Egret_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Egret_Example-dummy.m"; sourceTree = "<group>"; };
+		C72E9F3BA77563E44BC42159E0C006BB /* EgretButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EgretButton.swift; path = Source/EgretButton.swift; sourceTree = "<group>"; };
 		CB2496557735F6856B57C2132024C33A /* Pods-Egret_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Egret_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CB91479FA33BBF19C2DFD410D25B174C /* Egret-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Egret-Info.plist"; sourceTree = "<group>"; };
+		CE72793F46FB806AB25F13D41D193848 /* View+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		D37D1032CACE529BC35D89A8BC162983 /* Pods-Egret_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Egret_Tests-dummy.m"; sourceTree = "<group>"; };
+		D3C2219E3ACBFF512093B41D51CF9D03 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB847BB3F8781432F0513AD0F390485C /* Egret-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Egret-umbrella.h"; sourceTree = "<group>"; };
 		DBF3CFCB27C458A75947E5F554C09D2C /* Pods-Egret_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Egret_Tests-Info.plist"; sourceTree = "<group>"; };
-		E46A14C4F6ADA16370520A927AA0469C /* Egret-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Egret-umbrella.h"; sourceTree = "<group>"; };
+		DF31BB6A16EEBF226698AE736DEA78BD /* EgretDatas.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EgretDatas.swift; sourceTree = "<group>"; };
+		EF1F49EE58C973F58D023234C8391D85 /* UIFont+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		F367AB6064E2DCD35124CAD13FE13A2D /* ResourceBundle-Egret-Egret-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Egret-Egret-Info.plist"; sourceTree = "<group>"; };
 		F43B948CAB2B83A692B1F4A111A8A0F3 /* Pods-Egret_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Egret_Example-Info.plist"; sourceTree = "<group>"; };
+		F43FAA5AC18ABE437D28C5195DC03624 /* ThisClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThisClass.swift; sourceTree = "<group>"; };
 		F5C4132D771637DBDDE54D3E778185A5 /* Pods-Egret_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Egret_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F811C899B717A0A2A28FEF88FA86922F /* Pods-Egret_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Egret_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F8E6C1DFB4E91B94740D4AAAB8762FC7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		FF77225E7F3C4209CF3D381B2A8E0207 /* Egret.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Egret.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		FFD2BE32BA3FF1B8B174BBDC02A2DAAF /* ResourceBundle-Egret-Egret-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Egret-Egret-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		09436EDCE2E2EC9675A28DC6A2FCDEF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4ABF21328B06761D7680FCBA3D89B1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A003C502612C5F4D58D4E0574714D18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,7 +127,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1576F3701866E574AF39B6AB16504291 /* Frameworks */ = {
+		20CF3C545084DE4EC73D3AFE0786F170 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,17 +142,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6F12E0A9B8EF1132996C83CEC69E421 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E64BCAF8196777FFF764A14A6756C45A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B6D3413C46501A5BA1CCE5C5F80F4FB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DC392276D63434FC1D30652021162B3 /* Egret.modulemap */,
+				B9ABBDDB425014DA235EB379AC32E819 /* Egret-dummy.m */,
+				CB91479FA33BBF19C2DFD410D25B174C /* Egret-Info.plist */,
+				0090A60894F6FCCE2D6DC1B340548920 /* Egret-prefix.pch */,
+				DB847BB3F8781432F0513AD0F390485C /* Egret-umbrella.h */,
+				4D04FCDF6A8E34215C396862A21EA0E1 /* Egret.debug.xcconfig */,
+				77CB6BC0A9FED30C2A20331F085C5D6A /* Egret.release.xcconfig */,
+				F367AB6064E2DCD35124CAD13FE13A2D /* ResourceBundle-Egret-Egret-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Egret";
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,23 +169,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6F5C91BF3DC119A4FC8F0C17E947F112 /* Egret */ = {
+		59A094694FF11BF9AA36FE7191D4B426 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4DEBBFAF36EBF6DD211225C557DAE8A0 /* EgretButton.swift */,
-				8469AB037CFA5FF4772074FDADDD9A52 /* EgretHeaderView.swift */,
-				AA05788C4D11DCE8379BEC35D52CB080 /* EgretInputView.swift */,
-				ABD2C7ECF7793BBE055475548AF5495F /* EgretSearchInputView.swift */,
-				1C894B1C3BB435720489794E9AE12B06 /* HeaderViewController.swift */,
-				140046AD411DE373FA7DCA957EB4A5D2 /* Images.xcassets */,
-				AA95B8DD8632A25465092CCC28A8FD72 /* Extensions */,
-				7FF996C4C8CCFD1DAD9041CC6DFCE1A1 /* Helper */,
-				A0CD164919F002EEB42A568694D4EFE9 /* Pod */,
-				7FBDA165F17D652353C4F95A1FC79626 /* Support Files */,
-				BA1A6137412242C35680868ABF57CAB9 /* Views */,
+				D3C2219E3ACBFF512093B41D51CF9D03 /* Constants.swift */,
+				DF31BB6A16EEBF226698AE736DEA78BD /* EgretDatas.swift */,
+				F43FAA5AC18ABE437D28C5195DC03624 /* ThisClass.swift */,
 			);
-			name = Egret;
-			path = ../..;
+			name = Helper;
+			path = Source/Helper;
 			sourceTree = "<group>";
 		};
 		7B74832A06CE6DFCD56048A7168552D8 /* Pods-Egret_Tests */ = {
@@ -184,38 +196,35 @@
 			path = "Target Support Files/Pods-Egret_Tests";
 			sourceTree = "<group>";
 		};
-		7FBDA165F17D652353C4F95A1FC79626 /* Support Files */ = {
+		81B5B19E07BB48F24D877E4B3A0449A2 /* Egret */ = {
 			isa = PBXGroup;
 			children = (
-				9C32D08001C76B9C23866B0914CD4C30 /* Egret.modulemap */,
-				5E4291B2D8AEEC59B92B3DC24DB563BE /* Egret-dummy.m */,
-				5190078FFECF8C11AB55C4EC8902881B /* Egret-Info.plist */,
-				A931DE0E0E7BF6983036E1EE8EABA6DD /* Egret-prefix.pch */,
-				E46A14C4F6ADA16370520A927AA0469C /* Egret-umbrella.h */,
-				465DA559434BF6EEB83E4176F3B3FB45 /* Egret.debug.xcconfig */,
-				8A4B01D620A4D0A938C070EDAD39297A /* Egret.release.xcconfig */,
-				FFD2BE32BA3FF1B8B174BBDC02A2DAAF /* ResourceBundle-Egret-Egret-Info.plist */,
+				C72E9F3BA77563E44BC42159E0C006BB /* EgretButton.swift */,
+				41F035D29C0BBC848D9CB5CFFF957320 /* EgretHeaderView.swift */,
+				2296984513DEB2C4DC4BC842E7017801 /* EgretInputView.swift */,
+				1772C7B66B9EEEA3EAE45DA7B886DE0C /* EgretRadioButton.swift */,
+				4FE8640CA5FFC4E5F6C5BD9D3B4E816D /* EgretSearchInputView.swift */,
+				6C4FABFE572713F8789626092DA58967 /* HeaderViewController.swift */,
+				446E1E1AEB0B8F902D79EE1AD1C7BAD1 /* Images.xcassets */,
+				873C7672AEE988CB0ECCDE52C36BACCD /* Extensions */,
+				59A094694FF11BF9AA36FE7191D4B426 /* Helper */,
+				A42108601E44DD257E67E67C652CB23F /* Pod */,
+				4B6D3413C46501A5BA1CCE5C5F80F4FB /* Support Files */,
+				FBFB28C03E908432A53DC7B6D8280630 /* Views */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Egret";
+			name = Egret;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		7FF996C4C8CCFD1DAD9041CC6DFCE1A1 /* Helper */ = {
+		873C7672AEE988CB0ECCDE52C36BACCD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8E23E92DD33DE5E10D4910F0549E0B55 /* Constants.swift */,
-				530E7F1B15491741893E2EC830851763 /* ThisClass.swift */,
+				B82E52171B41B44732CF514625443C43 /* UIColor+Extension.swift */,
+				EF1F49EE58C973F58D023234C8391D85 /* UIFont+Extension.swift */,
+				CE72793F46FB806AB25F13D41D193848 /* View+Extension.swift */,
 			);
-			name = Helper;
-			path = Source/Helper;
-			sourceTree = "<group>";
-		};
-		8B827EDA50D47AD1428F71DF0A34E19A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6F5C91BF3DC119A4FC8F0C17E947F112 /* Egret */,
-			);
-			name = "Development Pods";
+			name = Extensions;
+			path = Source/Extensions;
 			sourceTree = "<group>";
 		};
 		94C81939F8BB97AB68F887F992ECA784 /* Pods-Egret_Example */ = {
@@ -235,12 +244,12 @@
 			path = "Target Support Files/Pods-Egret_Example";
 			sourceTree = "<group>";
 		};
-		A0CD164919F002EEB42A568694D4EFE9 /* Pod */ = {
+		A42108601E44DD257E67E67C652CB23F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FF77225E7F3C4209CF3D381B2A8E0207 /* Egret.podspec */,
-				75B7CDDC2F54E1BF035668B57FD17404 /* LICENSE */,
-				20A623888120649F8497815389B39B2C /* README.md */,
+				97484ACC6A6F2E05A3AB4B3836FC8CD7 /* Egret.podspec */,
+				67DC6D8C6E1B7CDE1F223407FFE2748F /* LICENSE */,
+				8049E72A676711F33E45FECC3F8F78DC /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -254,17 +263,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AA95B8DD8632A25465092CCC28A8FD72 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F8E6C1DFB4E91B94740D4AAAB8762FC7 /* UIColor+Extension.swift */,
-				4805DA8BA45192A3CF548BC3410EA78B /* UIFont+Extension.swift */,
-				B951AF106B5DFE050BACE330BB761C55 /* View+Extension.swift */,
-			);
-			name = Extensions;
-			path = Source/Extensions;
-			sourceTree = "<group>";
-		};
 		AE36E03133C63228FD77B00BB099210E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,21 +274,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA1A6137412242C35680868ABF57CAB9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				32F77B0FED73324D5D10B031EBC13E69 /* CountryCodeTableViewCell.swift */,
-				2E9D4771C1F11C9F29E9D558640836A4 /* EgretCodeSelectView.swift */,
-			);
-			name = Views;
-			path = Source/Views;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				8B827EDA50D47AD1428F71DF0A34E19A /* Development Pods */,
+				E34AD81BECBE89A7B6296D368F613521 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				AE36E03133C63228FD77B00BB099210E /* Products */,
 				A9D6ACDA2B12AD8B135AFC7273D3C05E /* Targets Support Files */,
@@ -305,6 +293,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E34AD81BECBE89A7B6296D368F613521 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81B5B19E07BB48F24D877E4B3A0449A2 /* Egret */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FBFB28C03E908432A53DC7B6D8280630 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CC6F556B3CA6DA2B0F75B38BFF26FF9 /* CountryCodeTableViewCell.swift */,
+				2A6C0E5DBF932B92228DF0F7D77DF77A /* EgretCodeSelectView.swift */,
+			);
+			name = Views;
+			path = Source/Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -316,14 +322,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A379C54740CAE0A3B4BA545A67C815EB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				311C9832DF0A611BB26C21C38140D8AF /* Egret-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBE43A5E79B7266E367ADF31DAEBA619 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,22 +330,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F58267CF118AC00362A527EF86D2150F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3524C2C52DE5CA8C49224EDC16E3B9CE /* Egret-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0A0CA2FE7C55F46C517186191C4B788B /* Egret */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9C1A99E23F043CD7195C3F88CACA643 /* Build configuration list for PBXNativeTarget "Egret" */;
+			buildConfigurationList = 0B3BB5918F9C11A33A40F5A5CD4D88FF /* Build configuration list for PBXNativeTarget "Egret" */;
 			buildPhases = (
-				A379C54740CAE0A3B4BA545A67C815EB /* Headers */,
-				F18D314E085481A4AD2DECB444ED2AEF /* Sources */,
-				E6F12E0A9B8EF1132996C83CEC69E421 /* Frameworks */,
-				F1A4436147499C1BD052BF108F54ADB7 /* Resources */,
+				F58267CF118AC00362A527EF86D2150F /* Headers */,
+				5D4E782867FC20EDA73C67F3D0FED773 /* Sources */,
+				09436EDCE2E2EC9675A28DC6A2FCDEF8 /* Frameworks */,
+				8CF75B3FEC87654A17CCD41B277C4287 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				81F0853C3625D274038AE4013471B0B8 /* PBXTargetDependency */,
+				01480A22542B19FFA7E27A85730034CB /* PBXTargetDependency */,
 			);
 			name = Egret;
 			productName = Egret;
@@ -356,11 +362,11 @@
 		};
 		1C49C2210D7073DC1C9DD49FA1EC7C0B /* Egret-Egret */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 764AB75024B53774C54E759737AD71E9 /* Build configuration list for PBXNativeTarget "Egret-Egret" */;
+			buildConfigurationList = 207A7488D62485BA84F723578DF3F323 /* Build configuration list for PBXNativeTarget "Egret-Egret" */;
 			buildPhases = (
-				471A3D75A7AEAF74999AF904E5FAE55D /* Sources */,
-				1576F3701866E574AF39B6AB16504291 /* Frameworks */,
-				2352180D595E0B283DAA4C5B489BFD77 /* Resources */,
+				7FAF507C0AF595EDAFB05A6DBF5BE375 /* Sources */,
+				20CF3C545084DE4EC73D3AFE0786F170 /* Frameworks */,
+				E9D60B662577CB5E8A3FEE0A1EAAAEC8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -383,7 +389,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				31D76468ADD67102D8FB9B41B40059BB /* PBXTargetDependency */,
+				7E1570D7993ABBB3D2AFC087B2EE0BA0 /* PBXTargetDependency */,
 			);
 			name = "Pods-Egret_Example";
 			productName = "Pods-Egret_Example";
@@ -402,7 +408,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D16E64903FF26969969678731637B1F6 /* PBXTargetDependency */,
+				8CF9B714AB273C3B5A533C732536E939 /* PBXTargetDependency */,
 			);
 			name = "Pods-Egret_Tests";
 			productName = "Pods-Egret_Tests";
@@ -447,14 +453,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2352180D595E0B283DAA4C5B489BFD77 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7E890213B82939A3DF74BF845FFA4C5 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37AE06C6AF4B5540481D11EFE8EA84D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,21 +460,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1A4436147499C1BD052BF108F54ADB7 /* Resources */ = {
+		8CF75B3FEC87654A17CCD41B277C4287 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47D3C1507656D87E7B77DB6505225F8 /* Egret.bundle in Resources */,
+				10A910233439EEF854C9AFE962C4B976 /* Egret.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D60B662577CB5E8A3FEE0A1EAAAEC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA2F676965A41B75E1FAEE8A61DDCE6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		471A3D75A7AEAF74999AF904E5FAE55D /* Sources */ = {
+		5D4E782867FC20EDA73C67F3D0FED773 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7442743CCC6E3287CCEF64E9BC42F0AB /* Constants.swift in Sources */,
+				3AB0CAF4722644E8CCFB41D6349BDBF0 /* CountryCodeTableViewCell.swift in Sources */,
+				4DB32DF7CBC78E4A54D0D4562C5D82BA /* Egret-dummy.m in Sources */,
+				1E7B3E0B7C13897DFD6B47E9B49313AB /* EgretButton.swift in Sources */,
+				3E2C178F5FEE75418E66046FEA50FC45 /* EgretCodeSelectView.swift in Sources */,
+				D0565456D785DF866968EC685092F903 /* EgretDatas.swift in Sources */,
+				3ABCE0206D57ED91C4CEAE1C8C21FF7C /* EgretHeaderView.swift in Sources */,
+				621C17499358BD008852F2ABFD368388 /* EgretInputView.swift in Sources */,
+				E93EDF13501DCDB4710A1E3ABFE4480B /* EgretRadioButton.swift in Sources */,
+				26C12924ADC77FA4E8378214EEE8E530 /* EgretSearchInputView.swift in Sources */,
+				A268D676C9EBC229DA4E5220CA1DEF18 /* HeaderViewController.swift in Sources */,
+				A6404A2C15814A9668FDC8C51263A1EA /* ThisClass.swift in Sources */,
+				9778B728B6D19D2F5290A86AD1C71941 /* UIColor+Extension.swift in Sources */,
+				905462E7298C04EAB8E6D67FE6A2F51A /* UIFont+Extension.swift in Sources */,
+				E59CC713509488D94C3F8768AD5A6CF3 /* View+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +509,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7FAF507C0AF595EDAFB05A6DBF5BE375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2C8C893FEDB9D0EFEDCA971556563E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,69 +524,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F18D314E085481A4AD2DECB444ED2AEF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E386BF4FDAB8211BFBE3591B18919B40 /* Constants.swift in Sources */,
-				AFEB3D7A70FFC7B3F5E1B0508CCF4193 /* CountryCodeTableViewCell.swift in Sources */,
-				05AE03B71C86FD64FA2D39C0DA36080F /* Egret-dummy.m in Sources */,
-				18B62A76CDD281F288105360BFC26B9F /* EgretButton.swift in Sources */,
-				DF7FD9F649A34C29C7586B2ED38C9291 /* EgretCodeSelectView.swift in Sources */,
-				2855D54BD517A21F041D78F76D3B6298 /* EgretHeaderView.swift in Sources */,
-				B3177D27DAC729B8BD65EA437E9DBD1A /* EgretInputView.swift in Sources */,
-				79C814359916C20D7A15021EE7A08B92 /* EgretSearchInputView.swift in Sources */,
-				F0C474C4E11C4D5F00817BB30C8609E7 /* HeaderViewController.swift in Sources */,
-				6F527FBA382654885683CA7F4C6B6A93 /* ThisClass.swift in Sources */,
-				7429CDF090787040E170B162E3D934F0 /* UIColor+Extension.swift in Sources */,
-				918C103FBCC3BD97AC5EAE3288BD1A42 /* UIFont+Extension.swift in Sources */,
-				8398F8B07DEF64178E5575B1F761A076 /* View+Extension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		31D76468ADD67102D8FB9B41B40059BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Egret;
-			target = 0A0CA2FE7C55F46C517186191C4B788B /* Egret */;
-			targetProxy = BC94AA8692FDCA97F2C95D8C4F478893 /* PBXContainerItemProxy */;
-		};
-		81F0853C3625D274038AE4013471B0B8 /* PBXTargetDependency */ = {
+		01480A22542B19FFA7E27A85730034CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Egret-Egret";
 			target = 1C49C2210D7073DC1C9DD49FA1EC7C0B /* Egret-Egret */;
-			targetProxy = 4849E55CF4673C72B5E165F3DE13ED93 /* PBXContainerItemProxy */;
+			targetProxy = 4C87D7D3BF349D47B8C2B5EC9A8FE5B0 /* PBXContainerItemProxy */;
 		};
-		D16E64903FF26969969678731637B1F6 /* PBXTargetDependency */ = {
+		7E1570D7993ABBB3D2AFC087B2EE0BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Egret;
+			target = 0A0CA2FE7C55F46C517186191C4B788B /* Egret */;
+			targetProxy = 81788445904433C27EDE5A17AFE68622 /* PBXContainerItemProxy */;
+		};
+		8CF9B714AB273C3B5A533C732536E939 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Egret_Example";
 			target = 5A05E19F0C5CA48EB293B4426657F256 /* Pods-Egret_Example */;
-			targetProxy = 555734D559B63D047E1F6C64426CA453 /* PBXContainerItemProxy */;
+			targetProxy = 3D63CB9E9A40CC7713D0A472A32033BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14704ED4EE2BFA57E25D487AA3553A19 /* Debug */ = {
+		15400423B0144AC88964EA9530468948 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 465DA559434BF6EEB83E4176F3B3FB45 /* Egret.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Egret";
-				IBSC_MODULE = Egret;
-				INFOPLIST_FILE = "Target Support Files/Egret/ResourceBundle-Egret-Egret-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = Egret;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		1EB3FF211D0B2F1615FB5534C45792C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A4B01D620A4D0A938C070EDAD39297A /* Egret.release.xcconfig */;
+			baseConfigurationReference = 4D04FCDF6A8E34215C396862A21EA0E1 /* Egret.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -582,11 +574,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		44640B20E3251C2DC0EF5C343441CE23 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -655,36 +646,21 @@
 			};
 			name = Release;
 		};
-		6D9026D2C681CF2EF43A0341E5C8DE70 /* Debug */ = {
+		59E06E4AF014746B4A3B15F555127853 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 465DA559434BF6EEB83E4176F3B3FB45 /* Egret.debug.xcconfig */;
+			baseConfigurationReference = 77CB6BC0A9FED30C2A20331F085C5D6A /* Egret.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Egret/Egret-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Egret/Egret-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Egret";
+				IBSC_MODULE = Egret;
+				INFOPLIST_FILE = "Target Support Files/Egret/ResourceBundle-Egret-Egret-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Egret/Egret.modulemap";
-				PRODUCT_MODULE_NAME = Egret;
 				PRODUCT_NAME = Egret;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -748,19 +724,35 @@
 			};
 			name = Release;
 		};
-		97B608EC17914917B5064E4D7E936D82 /* Release */ = {
+		979B118ABB7733807EE6E5179C908048 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A4B01D620A4D0A938C070EDAD39297A /* Egret.release.xcconfig */;
+			baseConfigurationReference = 77CB6BC0A9FED30C2A20331F085C5D6A /* Egret.release.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Egret";
-				IBSC_MODULE = Egret;
-				INFOPLIST_FILE = "Target Support Files/Egret/ResourceBundle-Egret-Egret-Info.plist";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Egret/Egret-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Egret/Egret-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Egret/Egret.modulemap";
+				PRODUCT_MODULE_NAME = Egret;
 				PRODUCT_NAME = Egret;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -864,6 +856,22 @@
 			};
 			name = Release;
 		};
+		DB5AF3D6722E21D6FC2F184043E17EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D04FCDF6A8E34215C396862A21EA0E1 /* Egret.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Egret";
+				IBSC_MODULE = Egret;
+				INFOPLIST_FILE = "Target Support Files/Egret/ResourceBundle-Egret-Egret-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = Egret;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		FF8C62B5548D33B5F133EE8EC266E8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27A6C59BEBAC1CD7B64957825A76BA06 /* Pods-Egret_Example.debug.xcconfig */;
@@ -900,20 +908,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B3BB5918F9C11A33A40F5A5CD4D88FF /* Build configuration list for PBXNativeTarget "Egret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15400423B0144AC88964EA9530468948 /* Debug */,
+				979B118ABB7733807EE6E5179C908048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207A7488D62485BA84F723578DF3F323 /* Build configuration list for PBXNativeTarget "Egret-Egret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5AF3D6722E21D6FC2F184043E17EB2 /* Debug */,
+				59E06E4AF014746B4A3B15F555127853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
 				7EE7A78859F657F6BEFC651185B43192 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		764AB75024B53774C54E759737AD71E9 /* Build configuration list for PBXNativeTarget "Egret-Egret" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14704ED4EE2BFA57E25D487AA3553A19 /* Debug */,
-				97B608EC17914917B5064E4D7E936D82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -932,15 +949,6 @@
 			buildConfigurations = (
 				44640B20E3251C2DC0EF5C343441CE23 /* Debug */,
 				D613552547989AFB7A4AEFCDCFE4D08A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E9C1A99E23F043CD7195C3F88CACA643 /* Build configuration list for PBXNativeTarget "Egret" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6D9026D2C681CF2EF43A0341E5C8DE70 /* Debug */,
-				1EB3FF211D0B2F1615FB5534C45792C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
