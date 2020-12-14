@@ -50,7 +50,7 @@ class ViewController: HeaderViewController {
         }
         
         needRightLabel = true
-        rightLabel.text = "刷新"
+        rightLabel.text = "Refresh"
         rightLabelAction = {
             print("HA HA HA !!!")
         }
@@ -72,7 +72,7 @@ class ViewController: HeaderViewController {
         phoneInput.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 50).isActive = true
         phoneInput.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.893).isActive = true
         phoneInput.heightAnchor.constraint(equalToConstant: 37).isActive = true
-        phoneInput.title = "手机"
+        phoneInput.title = "Mobile"
         phoneInput.haveCodeSelect = true
         phoneInput.keyboardType = .numberPad
         phoneInput.layoutIfNeeded()
@@ -82,8 +82,9 @@ class ViewController: HeaderViewController {
         codeInput.topAnchor.constraint(equalTo: phoneInput.bottomAnchor, constant: 10).isActive = true
         codeInput.widthAnchor.constraint(equalTo: phoneInput.widthAnchor).isActive = true
         codeInput.heightAnchor.constraint(equalTo: phoneInput.heightAnchor).isActive = true
-        codeInput.title = "验证码"
+        codeInput.title = "Code"
         codeInput.haveSubmit = true
+        codeInput.sendTitle = "Send"
         codeInput.keyboardType = .numberPad
         codeInput.counter = 120
         codeInput.submitActoin = {

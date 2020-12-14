@@ -50,6 +50,18 @@ open class EgretInputView: UIView {
         }
     }
     
+    private var sendTitles: String = "Send"
+    open var sendTitle: String {
+        get {
+            return sendTitles
+        }
+        
+        set {
+            sendTitles = newValue
+            submit.setTitle(sendTitles, for: .normal)
+        }
+    }
+    
     private var enableds: Bool = true
     open var enabled: Bool {
         get {
@@ -258,7 +270,7 @@ open class EgretInputView: UIView {
         line.heightAnchor.constraint(equalTo: submit.heightAnchor, multiplier: 0.7).isActive = true
         line.widthAnchor.constraint(equalToConstant: 1).isActive = true
         
-        submit.setTitle("发送", for: .normal)
+        submit.setTitle(sendTitles, for: .normal)
         submit.setTitleColor(UIColor.My.contentgreen, for: .normal)
         submit.titleLabel?.font = UIFont(name: "PingFangSC-Medium", size: 13)
         
