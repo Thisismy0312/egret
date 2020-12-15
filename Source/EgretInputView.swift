@@ -351,7 +351,7 @@ extension EgretInputView {
             tmp -= 1
         } else {
             tmp = counter
-            submit.setTitle("发送", for: .normal)
+            submit.setTitle(sendTitles, for: .normal)
             timer?.invalidate()
             submit.alpha = 1
             submitEnable = true
