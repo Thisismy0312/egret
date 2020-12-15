@@ -62,6 +62,41 @@ button.radius = 20                                    // Corner radius of EgretB
 
 ![image](Images/EgretButton.png)
 
+#### EgretInputView
+
+```swift
+let phoneInput = EgretInputView()
+let codeInput = EgretInputView()
+
+phoneInput.title = "Mobile"             // Title of EgretInputView
+phoneInput.haveCodeSelect = true        // Need country code selector
+phoneInput.keyboardType = .numberPad    // Keyboard type of EgretInputView
+
+codeInput.title = "Code"
+codeInput.haveSubmit = true             // Show submit
+codeInput.sendTitle = "Send"            // Title of submit
+codeInput.keyboardType = .numberPad
+codeInput.counter = 120                 // Countdown time
+codeInput.submitActoin = yourFunction() // Action of Submit
+```
+
+**EgretInputView attributes**
+
+|attributes|type|
+|:---:|:---:|
+|`haveCodeSelect`|Bool|
+|`haveSubmit`|bool|
+|`sendTitle`|String|
+|`enabled`|Bool|
+|`title`|String?|
+|`keyboardType`|UIKeyboardType|
+|`counter`|Int|
+|`submitActoin`|(() -> Void)?|
+|`text`|String?|
+|`code`|String?|
+
+![image](Images/ScreenHost.gif)
+
 ## Contributors ✨
 
 <table>
