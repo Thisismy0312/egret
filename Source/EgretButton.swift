@@ -146,6 +146,30 @@ open class EgretButton: UIView {
         }
     }
     
+    private var icon_Width: Double = 20
+    open var iconWidth: Double {
+        get {
+            return icon_Width
+        }
+        
+        set {
+            icon_Width = newValue
+            setStackImageConstraints()
+        }
+    }
+    
+    private var icon_Height: Double = 20
+    open var iconHeight: Double {
+        get {
+            return icon_Height
+        }
+        
+        set {
+            icon_Height = newValue
+            setStackImageConstraints()
+        }
+    }
+    
     private func setLabel() {
         titleLabel.text = titles
     }
@@ -196,9 +220,13 @@ open class EgretButton: UIView {
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
+        setStackImageConstraints()
+    }
+    
+    func setStackImageConstraints() {
         stackImage.translatesAutoresizingMaskIntoConstraints = false
-        stackImage.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        stackImage.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        stackImage.widthAnchor.constraint(equalToConstant: icon_Width).isActive = true
+        stackImage.heightAnchor.constraint(equalToConstant: icon_Height).isActive = true
     }
     
     open override func layoutSubviews() {
@@ -223,8 +251,6 @@ open class EgretButton: UIView {
             self.state = false
             self.alpha = 1
         }
-        
-        print("========cancel========")
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
