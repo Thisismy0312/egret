@@ -71,7 +71,7 @@ open class EgretSearchInputView: UIView {
         
         set {
             placeHolders = newValue
-            contentInput.attributedPlaceholder = NSAttributedString(string: placeHolders, attributes: [NSAttributedString.Key.foregroundColor: placeHolderColors])
+            setFonts()
         }
     }
     
@@ -83,7 +83,18 @@ open class EgretSearchInputView: UIView {
         
         set {
             placeHolderColors = newValue
-            contentInput.attributedPlaceholder = NSAttributedString(string: placeHolders, attributes: [NSAttributedString.Key.foregroundColor: placeHolderColors])
+            setFonts()
+        }
+    }
+    
+    private var fonts: UIFont = UIFont(name: "PingFangSC-Regular", size: CGFloat(14)) ?? UIFont.systemFont(ofSize: CGFloat(14))
+    open var font: UIFont {
+        get {
+            return fonts
+        }
+        set {
+            fonts = newValue
+            setFonts()
         }
     }
     
@@ -122,7 +133,8 @@ open class EgretSearchInputView: UIView {
         let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 10))
         contentInput.leftView = paddingView
         contentInput.leftViewMode = .always
-        contentInput.attributedPlaceholder = NSAttributedString(string: placeHolders, attributes: [NSAttributedString.Key.foregroundColor: placeHolderColors])
+        contentInput.font = fonts
+        setFonts()
         contentInput.textColor = textColor
         contentInput.clearButtonMode = clearButtonModes
         contentInput.returnKeyType = .search
@@ -162,6 +174,14 @@ open class EgretSearchInputView: UIView {
     open override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         self.layer.cornerRadius = self.bounds.height * 0.5
+    }
+    
+    private func setFonts() {
+        contentInput.font = fonts
+        contentInput.attributedPlaceholder = NSAttributedString(string: placeHolders, attributes: [
+            NSAttributedString.Key.foregroundColor: placeHolderColors,
+            NSAttributedString.Key.font: fonts
+        ])
     }
 }
 
