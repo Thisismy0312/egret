@@ -9,6 +9,7 @@ import UIKit
 
 public protocol SearchDelegate {
     func returnAction(_ textField: UITextField)
+    func keyEntryAction(_ textField: UITextField)
 }
 
 open class EgretSearchInputView: UIView {
@@ -138,6 +139,7 @@ open class EgretSearchInputView: UIView {
         contentInput.textColor = textColor
         contentInput.clearButtonMode = clearButtonModes
         contentInput.returnKeyType = .search
+        contentInput.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         contentInput.delegate = self
         
         searchIcon.image = icons
@@ -189,5 +191,9 @@ extension EgretSearchInputView: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.returnAction(textField)
         return true
+    }
+    
+    @objc func textChanged() {
+        delegate?.keyEntryAction(contentInput)
     }
 }
