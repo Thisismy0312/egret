@@ -10,7 +10,7 @@ import UIKit
 open class EgretHeaderView: UIView {
     
     let titleView = UIView()
-    let titleLabel = UILabel()
+    public let titleLabel = UILabel()
     
     let gradientLayer = CAGradientLayer.init()
     
@@ -115,7 +115,7 @@ open class EgretHeaderView: UIView {
         titleLabel.text = titles
     }
     
-    func setSafeArea(_ safeArea: CGFloat) {
+    open func setSafeArea(_ safeArea: CGFloat) {
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
