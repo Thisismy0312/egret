@@ -176,6 +176,10 @@ class ViewController: HeaderViewController {
 }
 
 extension ViewController: SearchDelegate {
+    func keyEntryAction(_ textField: UITextField) {
+        
+    }
+    
     func returnAction(_ textField: UITextField) {
 //        print(textField.text)
     }
